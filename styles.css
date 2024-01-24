@@ -73,6 +73,21 @@ h3 {
     
 }
 
-p {
-    
+#div1 {
+    background-color: black;
+    width: 33.3%;
+   
 }
+
+#div2 {
+    background-image: url(images/white.avif);
+    width: 33.3%;
+    float: left;
+}S
+
+#div3 {
+
+    width: 33.3%;
+    margin: 0 auto;
+}
+
