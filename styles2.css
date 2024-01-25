@@ -5,6 +5,9 @@
   padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "Poppins", sans-serif;
@@ -21,6 +24,8 @@ nav {
     align-items: center;
     height: 10vh ;
     background-color: black;
+    width: 100%;
+    padding: 20px;
 }
 
 .n-links {
@@ -45,6 +50,13 @@ header {
     background-image: url(images/white.avif);
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: 2rem; 
+    width: 100%;
+ 
+
+}
+
+#author {
     font-size: 1.5rem;
 }
 
@@ -52,6 +64,8 @@ header {
     width: 100%;
     height: 5px;
     background-color: silver;
+    background-size: cover;
+ 
 }
 
 .flex-container {
@@ -157,9 +171,14 @@ header {
 .section2-header2,.section2-header3 {
     padding-left: 10px;
     margin-bottom: 5px;
-    
-}
 
+}
+    
+#Favourite-Paragraph{
+    padding-left: 10px;
+    margin-bottom: 5px;
+
+}
 
 .list2, .list1 { 
     text-align: left;
@@ -200,5 +219,21 @@ header {
 .flex-item-5{
     min-height: 200px;
     text-align: center;
+}
+
+hr {
+    width: 15%; 
+    margin:auto; 
+    border: none;
+    height: 3px; 
+    background-color: black; 
+}
+
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
 }
 
