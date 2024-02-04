@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body {
+    font-size: 12pt;
+    font-family: Arial, sans-serif;
+    margin: 10pt;
+    background-color: #3AADA9;
+}
+
+header {
+    height: 175px;
+    width: 100%;
+    background-color: #2b7a78;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+#title {
+    font-size: 3.5rem;
+    color: #17252A;
+}
+
+#author {
+    font-size: 1.5rem;
+    margin-top: -30px;
+    color: #DEF2F1;
+
+}
+
+#date {
+    font-size: 1rem;
+    color:#92dad6;;
+}
+
+.content1 {
+    display: flex;
+    align-items: flex-start;
+    background-color: #DEF2F1;
+    border-radius: 20px;
+}
+
+.content-left {
+    flex: 1; 
+    padding: 10px;
+    text-align: center;
+}
+
+.content-right {
+    flex: 1; 
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.content-right img {
+    border-radius: 20px; 
+}
+
+
+
+.subhead1 {
+    color: #2b7a78;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.paragraph1 {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+
+
+.tablecontents {
+    flex: 1; 
+    padding: 10px;
+}
+
+
+.image-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.image-table th, .image-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.image-table th {
+    background-color: #2b7a78;
+    color: white;
+}
+
+.content-right-paragraph {
+    flex: 1; 
+    padding: 10px;
+    text-align: center;
+}
+
+
+.subhead2 {
+    color: #72CC50;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.paragraph2 {
+    color: #2b7a78;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subhead3 {
+    color: #019875;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.Extra-Paragraph{
+    color: #00aead;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a:link,a:visited {
+    text-decoration: none;
+    color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+
+a:hover {
+    text-decoration: underline;
+    color: green;
+    text-underline-offset: 1rem;
+}
+
+a:active {
+    color: blue;
+}
+
