@@ -52,8 +52,8 @@ header {
 .content-right {
     flex: 1; 
     display: flex;
-    justify-content: right;
-    align-items: right;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .content-right img {
