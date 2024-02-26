@@ -7,6 +7,10 @@ body {
     background-color: #3AADA9;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
 header {
     height: 175px;
     width: 100%;
@@ -52,12 +56,17 @@ header {
 .content-right {
     flex: 1; 
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    
 }
 
 .content-right img {
     border-radius: 20px; 
+    height: auto;
+    width: 300px;
+ 
 }
 
 
@@ -142,3 +151,73 @@ a:active {
     color: blue;
 }
 
+#Welcome {
+    text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    border-radius: 20px;
+    
+    
+    
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    
+  
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: whitesmoke;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+ 
