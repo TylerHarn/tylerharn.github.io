@@ -48,3 +48,52 @@ navbarItems.forEach(item => {
         this.style.fontSize = "1em";
     };
 });
+
+//Form Code
+// Update slider values
+document.getElementById('aboutMe').addEventListener('input', function() {
+    document.getElementById('aboutMeValue').innerText = this.value;
+});
+
+document.getElementById('resume').addEventListener('input', function() {
+    document.getElementById('resumeValue').innerText = this.value;
+});
+
+document.getElementById('projects').addEventListener('input', function() {
+    document.getElementById('projectsValue').innerText = this.value;
+});
+
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get form values
+    var formData = {
+        ageGroup: document.getElementById('ageGroup').value,
+        email: document.getElementById('email').value,
+        browsingFrequency: document.querySelector('input[name="browsingFrequency"]:checked').value,
+        aboutMeValue: document.getElementById('aboutMe').value,
+        resumeValue: document.getElementById('resume').value,
+        projectsValue: document.getElementById('projects').value,
+        features: [],
+        otherText: document.getElementById('otherText').value,
+        themePreference: document.querySelector('input[name="themePreference"]:checked').value
+    };
+
+    // Get selected features
+    var features = document.getElementsByName('features');
+    for (var i = 0; i < features.length; i++) {
+        if (features[i].checked) {
+            formData.features.push(features[i].value);
+        }
+    }
+
+    // Store data in local storage with unique key
+    localStorage.setItem('formData', JSON.stringify(formData));
+
+    alert('Form Submitted');
+});
+
+document.getElementById('myForm').addEventListener('reset', function() {
+    // Clear data from local storage
+    localStorage.clear();
+});

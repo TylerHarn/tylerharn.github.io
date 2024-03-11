@@ -95,6 +95,85 @@
         </div>
     </div>
     <br><br>
+    <!-- New Section for the Form -->
+    <div class="container">
+        <h1 id="formTitle">Portfolio Needs Analysis Survey</h1>
+        <form id="myForm">
+            <label for="ageGroup">Please select your age group:</label>
+            <select id="ageGroup" name="ageGroup" required>
+                <option value="">Select</option>
+                <option value="18-24">18-24</option>
+                <option value="25-34">25-34</option>
+                <option value="35-44">35-44</option>
+                <option value="45-54">45-54</option>
+                <option value="55">55+</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+
+            <label for="email">Please enter your email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>How often do you browse personal websites?</label>
+            <div id="browsingFrequency">
+                <input type="radio" id="daily" name="browsingFrequency" value="Daily">
+                <label for="daily">Daily</label>
+                <input type="radio" id="weekly" name="browsingFrequency" value="Weekly">
+                <label for="weekly">Weekly</label>
+                <input type="radio" id="monthly" name="browsingFrequency" value="Monthly">
+                <label for="monthly">Monthly</label>
+                <input type="radio" id="never" name="browsingFrequency" value="Never">
+                <label for="never">Never</label>
+            </div>
+
+            <br>
+
+            <label>What features do you appreciate the most when navigating through a personal website?</label>
+            <div id="features">
+                <input type="checkbox" id="navigationHeader" name="features" value="Navigation Header">
+                <label for="navigationHeader">Navigation Header</label>
+                <input type="checkbox" id="interactiveElements" name="features" value="Interactive Elements">
+                <label for="interactiveElements">Interactive Elements</label>
+                <input type="checkbox" id="minimalisticTheme" name="features" value="Minimalistic Theme/Template">
+                <label for="minimalisticTheme">Minimalistic Theme/Template</label>
+                <input type="checkbox" id="crossBrowserCompatible" name="features" value="Cross-Browser Compatible">
+                <label for="crossBrowserCompatible">Cross-Browser Compatible</label>
+                <input type="checkbox" id="accessibilityFeatures" name="features" value="Accessibility Features">
+                <label for="accessibilityFeatures">Accessibility Features</label>
+                <input type="checkbox" id="loadingTimes" name="features" value="Loading Times">
+                <label for="loadingTimes">Loading Times</label>
+                <input type="checkbox" id="other" name="features" value="Other">
+                <label for="other">Other (please specify)</label>
+                <input type="text" id="otherText" name="otherText" placeholder="Please specify">
+            </div>
+
+            <div>
+                <label>Using a scale of  1-5, how much do you value each section in a personal portfoilo?</label>
+                <br>
+                    <label for="aboutMe">About Me Section</label>
+                    <input type="range" id="aboutMe" name="aboutMe" min="1" max="5" value="3">
+                    <span id="aboutMeValue">5</span>
+
+                    <label for="resume">Viewable Download Resume/Cover Letter</label>
+                    <input type="range" id="resume" name="resume" min="1" max="5" value="3">
+                    <span id="resumeValue">5</span>
+
+                    <label for="projects">Projects/Work Experience</label>
+                    <input type="range" id="projects" name="projects" min="1" max="5" value="3">
+                    <span id="projectsValue">5</span>
+            </div>
+            <br>
+            <label>Do you prefer dark or light themes?</label>
+            <div id="themePreference">
+                <input type="radio" id="darkTheme" name="themePreference" value="Dark">
+                <label for="darkTheme">Dark</label>
+                <input type="radio" id="lightTheme" name="themePreference" value="Light">
+                <label for="lightTheme">Light</label>
+            </div>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset Form">
+        </form>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

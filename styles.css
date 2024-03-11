@@ -220,4 +220,90 @@ a:active {
     display: block;
   }
   
- 
+  /* New CSS Code for Form */
+  
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: black; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#browsingFrequency {
+    display: flex;
+   
+} 
+
+#browsingFrequency input[type="radio"] {
+    margin-right: -5px;
+}
+
+#browsingFrequency label {
+    margin-right: 15px;
+}
+
+#features input[type="checkbox"] {
+    margin-right: 144px;
+}
+
+
+#themePreference {
+    display: flex;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+#formTitle {
+    color: #019875;
+}
+
+
