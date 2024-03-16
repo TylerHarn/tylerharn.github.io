@@ -1,179 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Education - Tyler Harnaraine</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/owl.carousel.min.css">
+  <link rel="stylesheet" href="lib/owl.theme.default.min.css">
+  <link rel="icon" href="images/favicon.svg">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Nunito:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="lib/animate.css">
+  <title>Tyler Harnaraine - Portfolio</title>
 </head>
+
 <body>
-    <div class="navbar">
-        <a href="#Welcome">Home</a>
-        <a href="#experiences">Experience</a>
-        <div class="dropdown">
-          <button class="dropbtn">Contact</button>
-          <div class="dropdown-content">
-            <a href="mailto:tyler.harnaraine@torontomu.ca">Email</a>
-            <a href="tel:14168252948">Phone</a>
-            <a href="https://www.linkedin.com/in/tyler-harnaraine-4a1a17258/">LinkedIn</a>
+  <div class="preloader">
+    <div class="circle"></div>
+  </div>
+
+  <nav class="navbar navbar-expand-md  sticky  fixed-top r-nav">
+    <div class="container">
+
+      <a class="navbar-brand animated fadeInLeft" href="#">Tyler Harnaraine</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarId" >
+        <span><i class="fas fa-bars hamburger"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarId">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item animated fadeInRight">
+            <a class="nav-link" href="#home">About <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item animated fadeInRight">
+            <a class="nav-link" href="#about">Experience</a>
+          </li>
+          <li class="nav-item animated fadeInRight">
+            <a class="nav-link" href="#services">Projects</a>
+          </li>
+          <li class="nav-item animated fadeInRight">
+            <a class="nav-link" href="#work">Skills</a>
+          </li>
+          <li class="nav-item animated fadeInRight">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+  <header id="home">
+    <div class="container-fluid header-content">
+      <div class="row">
+        <div class="col">
+          <div class="content-box text-center animated fadeInUp">
+            <h4>Welcome</h4>
+            <h1>I'm <span class="element" style="color:#00aeff;font-weight:bold;"></span></h1>
+            <p>A Third-Year BTM Student at TMU</p>
+              <img src="images/cropped_image.png" alt="" class="img-fluid">
+            <a href="#experience" class="btn">About Me</a>
           </div>
         </div>
       </div>
-
-    <header>
-        <h1 id="title">My Education</h1>
-        <h2 id="author">Tyler Harnariane</h2>
-        <h3 id="date">2/3/2024</h3>
-    </header>
-    <br>
-    
-    <!-- Button user will press -->
-    <button id="promptButton">Please Enter Your Name</button>
-
-    <!-- This is the HTML content that is added to the page from the JS prompt -->
-    <h2 id="Welcome">Welcome to the page, <span id="output"></span></h2>
-    <br>
-    <div class="content1">
-        <div class="content-left">
-            <h1 class="subhead1">INSTITUTIONS</h1>
-            <p class="paragraph1">Throughout my high school, my academic journey was shaped by my experiences at <strong>W.A Porter</strong> (2017-2021). This institution offered a diverse set of programs in both the fields of sciences, technology, and business. As I got to my senior years and began to branch out and explore all these programs, I found that both the fields of business and technology interested me. <br><br>This realization drew me towards the <strong>Business Technology Program at Toronto Metropolitan University</strong> (2021-Present), which seemed to be the perfect blend of my interests. I am now in my third year of this program and have gained valuable knowledge through technical concepts such as programming, infrastructure, processes management, and business concepts such as accounting, finance, marketing, and systems analysis.</p>
-        </div>
-        <div class="content-right">
-            <img src="Images/pngfind.com-monster-silhouette-png-4675403.png" alt="" onclick="toggleSize(this)">
-        </div>
     </div>
-    <br><br>
-    <div class="content1" id="experiences">
-        <div class="tablecontents">
-            <table class="image-table">
-                <thead>
-                    <tr>
-                        <th>My:</th>
-                        <th>Accomplishments</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><h2><a href="https://www.torontomu.ca/calendar/2023-2024/programs/trsm/business_tech/">Courses</a></h2></td>
-                        <td>
-                            <ul class="list1">
-                                <li><strong>IT Infrastructure</strong> - <i>Computer Hardware/Software and Networks</i></li>
-                                <li><strong>Data and Information Management</strong> - <i>Core Concepts in DB management</i></li>
-                                <li><strong>Fundamentals of Programming</strong> - <i>Programming Fundamentals through Object-Oriented and Event Driven Program Design</i></li>
-                                <li><strong>Information Systems Security & Privacy</strong> - <i>Fundamentals of Info Sec</i></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><h2><a href="https://www.linkedin.com/in/tylerharnaraine">Awards</a></h2></td>
-                        <td>
-                            <ol>
-                                <li><strong>Honor Role</strong> - <i>W.A Porter 2018</i></li>
-                                <li><strong>Honor Role</strong> - <i>W.A Porter 2019</i></li>
-                                <li><strong>Honor Role</strong> - <i>W.A Porter 2020</i></li>
-                                <li><strong>Honor Role</strong> - <i>W.A Porter 2021</i></li>
-                                <li><strong>Admission Scholarship</strong> - <i>TMU: BTM </i></li>
-                            </ol>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-     
-    <br><br>
+  </header>
 
-    <div class="content1">
-        <div class="content-left">
-            <h1 class="subhead2">FAVOURITE COURSE</h1>
-            <p class="paragraph2">I believe that ITM 301 - <i>IT Infrastructure</i>, has been the most useful to my career path. This course provided me with an introduction to computer hardware, software, networking, equipping me with the knowledge to troubleshoot, maintain, and understand related processes for each. At my first Co-op work experience, I regularly used this information to complete my assigned tasks and understand concepts being explained to me.</p>
-        </div>
-        <div class="content-right-paragraph">
-            <h2 class="subhead3">EXTRACURRICULARS</h2>
-            <p class="Extra-Paragraph">Regarding curriculars related to my program, I am currently in the BTM Co-op program and have completed my first work term as an IT Experience Consultant at Tridel. During this role, I spent my time completing IT projects related to user experience, as well as helping out with service desk tasks. In my spare time, I enjoy learning about computer networking and studying for new certifications to add to my resume.</p>
-        </div>
-    </div>
-    <br><br>
-    <!-- New Section for the Form -->
-    <div class="container">
-        <h1 id="formTitle">Portfolio Needs Analysis Survey</h1>
-        <form id="myForm">
-            <label for="ageGroup">Please select your age group:</label>
-            <select id="ageGroup" name="ageGroup" required>
-                <option value="">Select</option>
-                <option value="18-24">18-24</option>
-                <option value="25-34">25-34</option>
-                <option value="35-44">35-44</option>
-                <option value="45-54">45-54</option>
-                <option value="55">55+</option>
-                <option value="Prefer not to say">Prefer not to say</option>
-            </select>
 
-            <label for="email">Please enter your email:</label>
-            <input type="email" id="email" name="email" required>
+<section>
+  <h1>About Section & Mobile View are WIP</h1>
+</section>
 
-            <label>How often do you browse personal websites?</label>
-            <div id="browsingFrequency">
-                <input type="radio" id="daily" name="browsingFrequency" value="Daily">
-                <label for="daily">Daily</label>
-                <input type="radio" id="weekly" name="browsingFrequency" value="Weekly">
-                <label for="weekly">Weekly</label>
-                <input type="radio" id="monthly" name="browsingFrequency" value="Monthly">
-                <label for="monthly">Monthly</label>
-                <input type="radio" id="never" name="browsingFrequency" value="Never">
-                <label for="never">Never</label>
-            </div>
-
+<!-- <section class="about r-p custom-bg-color" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 way-fade-up">
+        <img src="images/cybercore.webp" class="img-fluid img-thumbnail" alt="Profile Picture">
+      </div>
+      <div class="col-lg-6 way-fade-up mt-5 mt-lg-0">
+        <div class="card custom-card-color text-black ">
+          <div class="card-body">
+            <h2 class="card-title text-center">About Me</h2>
             <br>
+            <p class="card-text text-center">Hi! I'm <strong>Tyler Harnaraine</strong>, a third-year <strong>Business Technology Management</strong> student at <strong>Toronto Metropolitan University</strong>, pursuing a career in Information Technology.</p>
+            <p class="card-text text-center">My coursework has equipped me with a strong foundation in areas such as IT Infrastructure, Business systems analysis, and programming. I'm excited to continue exploring the intersection of business and technology as I progress in my studies.</p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            <label>What features do you appreciate the most when navigating through a personal website?</label>
-            <div id="features">
-                <input type="checkbox" id="navigationHeader" name="features" value="Navigation Header">
-                <label for="navigationHeader">Navigation Header</label>
-                <input type="checkbox" id="interactiveElements" name="features" value="Interactive Elements">
-                <label for="interactiveElements">Interactive Elements</label>
-                <input type="checkbox" id="minimalisticTheme" name="features" value="Minimalistic Theme/Template">
-                <label for="minimalisticTheme">Minimalistic Theme/Template</label>
-                <input type="checkbox" id="crossBrowserCompatible" name="features" value="Cross-Browser Compatible">
-                <label for="crossBrowserCompatible">Cross-Browser Compatible</label>
-                <input type="checkbox" id="accessibilityFeatures" name="features" value="Accessibility Features">
-                <label for="accessibilityFeatures">Accessibility Features</label>
-                <input type="checkbox" id="loadingTimes" name="features" value="Loading Times">
-                <label for="loadingTimes">Loading Times</label>
-                <input type="checkbox" id="other" name="features" value="Other">
-                <label for="other">Other (please specify)</label>
-                <input type="text" id="otherText" name="otherText" placeholder="Please specify">
-            </div>
 
-            <div>
-                <label>Using a scale of  1-5, how much do you value each section in a personal portfoilo?</label>
+Timeline -->
+<!-- Timeline -->
+<!-- Timeline -->
+<section class="timeline-section"> <!-- Added section with class "timeline-section" -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-white text-center">Experience Timeline</h2>
+        <br>
+        <div class="main-timeline">
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <div class="timeline-year">2022 <br> <h6>September</h6></div>
+              <h3 class="title">IT Coordinator</h3>
+              <p class="description">
+                <strong>Reconcillation In Business </strong>
                 <br>
-                    <label for="aboutMe">About Me Section</label>
-                    <input type="range" id="aboutMe" name="aboutMe" min="1" max="5" value="3">
-                    <span id="aboutMeValue">5</span>
-
-                    <label for="resume">Viewable Download Resume/Cover Letter</label>
-                    <input type="range" id="resume" name="resume" min="1" max="5" value="3">
-                    <span id="resumeValue">5</span>
-
-                    <label for="projects">Projects/Work Experience</label>
-                    <input type="range" id="projects" name="projects" min="1" max="5" value="3">
-                    <span id="projectsValue">5</span>
-            </div>
-            <br>
-            <label>Do you prefer dark or light themes?</label>
-            <div id="themePreference">
-                <input type="radio" id="darkTheme" name="themePreference" value="Dark">
-                <label for="darkTheme">Dark</label>
-                <input type="radio" id="lightTheme" name="themePreference" value="Light">
-                <label for="lightTheme">Light</label>
-            </div>
-
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset Form">
-        </form>
+                (Bullet List Maybe)
+              </p>
+            </a>
+          </div>
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <div class="timeline-year">2023 <br> <h6>May - Dec</h6></div>
+              <h3 class="title">IT Experience Consultant</h3>
+              <p class="description">
+                <strong>Tridel </strong>
+                <br>
+                (Bullet List Maybe)              </p>
+            </a>
+          </div>
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <div class="timeline-year">2024  <br> <h6> May - Aug </h6> </div>
+              <h3 class="title">System Engineer</h3>
+              <p class="description">
+                <strong>FSRA</strong>
+                <br>
+                (Upcoming)
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="main.js"></script>
+  </div>
+</section>
+
+
+
+
+  <!-- Projects -->
+<section class="services bg-sec r-p" id="services">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col mb-5 way-fade-right">
+        <div class="col">
+          <h2 class="text-white">Personal Projects</h2>
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="row text-center way-fade-up">
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fab fa-windows"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vmware ESXi / AD DS Implementation</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Implemented VMware ESXi to create a virtual server environment, configuring a domain on Windows Server 2019. Successfully joined additional virtual machines to the domain and managed them through GPOs, demonstrating proficiency client managment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fab fa-linux"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Linux Home Server</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Set up a home server with Ubuntu, adding a secure network drive and OpenVPN for safe remote access. Used Firewall (UFW) and SSH keys to keep data safe, showing skills in keeping servers secure and easy to use.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">IDS Configuration (Snort)</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Configured Snort as an intrusion detection system (IDS) to monitor network traffic for malicious activities.This project involved setting up Snort rules, defining network segments to monitor, and analyzing alerts to detect and respond to potential threats effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">VLAN Configuration</h5>
+            <div class="service-border"></div>
+            <p class="card-text"> Set up and configured VLANs in my home lab using a TP-LINK managed switch, focusing on segregating network traffic, enabling inter-VLAN routing, and enhancing security with access control lists (ACLs). This project showcased my skills in designing and managing a secure, efficient network infrastructure.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Azure VNet Management</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Implemented Virtual Networks in Azure lab environment, involving VNet creation, subnetting, and network secuirty groups (NSGs) for access control, showcasing my ability to manage and created secure, scalable, cloud networks in Microsoft Azure. 
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vulnerability Exploitation
+            </h5>
+            <div class="service-border"></div>
+            <p class="card-text">Explored vulnerabilities on Metasploitable, including FTP anonymous access, weak SSH credentials, misconfigured Samba shares, and unpatched web apps. Used exploits to gain unauthorized access and demonstrate security impact, enhancing my skills in identifying security weaknesses.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!--  Skills and Certificatons -->
+  <section class="work r-p" id="work">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col mb-5 way-fade-left">
+          <h2 class="text-white" >Skills and Certifications</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 mx-auto mb-5 way-fade-left">
+          <button class="btn r-btn" data-filter="all">All</button>
+          <button class="btn r-btn" data-filter="1">Skills</button>
+          <button class="btn r-btn" data-filter="2">Certifications</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row filter-container mx-auto img-loaded">
+  
+          <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="2">
+            <div class="card-flip">
+              <div class="card-front">
+                <img src="images/Cisco Networkign Basics.png" class="img-fluid" alt="">
+              </div>
+              <div class="card-back">
+          
+                <img src="images/Networking.png" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="4,2">
+            <div class="card-flip">
+              <div class="card-front">
+                <img src="images/AI image enchaned for 2nd background.webp" class="img-fluid" alt="">
+              </div>
+              <div class="card-back">
+                
+                <img src="images/AI image enchaned for 2nd background.webp" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="1,4,2">
+            <div class="card-flip">
+              <div class="card-front">
+                <img src="images/AI image enchaned for 2nd background.webp" class="img-fluid" alt="">
+              </div>
+              <div class="card-back">
+            
+                <img src="images/placerhodler image.webp" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="4,3,2">
+            <div class="card-flip">
+              <div class="card-front">
+                <img src="images/gadient file 2.avif" class="img-fluid" alt="">
+              </div>
+              <div class="card-back">
+              
+                <img src="images/IT background image 2.jpeg" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="4,3,2">
+            <div class="card-flip">
+              <div class="card-front">
+                <img src="images/IT background image 2.jpeg" class="img-fluid" alt="">
+              </div>
+              <div class="card-back">
+                
+                <img src="images/placerhodler image.webp" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="4,3,2">
+            <div class="card-flip">
+              <div class="card-front">
+                <img src="images/IT background image 2.jpeg" class="img-fluid" alt="">
+              </div>
+              <div class="card-back">
+              
+                <img src="images/placerhodler image.webp" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+ 
+
+<!-- Contact -->
+<section class="contact r-p bg-sec2" id="contact">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col way-fade-left">
+        <h2>Contact Me</h2>
+        <p>Have Questions or Want to Connect? <br>
+          Feel Free To Leave a Message Below</p>
+      </div>
+    </div>
+    <div class="row mt-5 way-fade-left">
+      <div class="col-md-4">
+        <a href="tel:4">
+          <div class="r-icon"> <i class="fas fa-mobile-alt"></i></div>
+        </a>
+        <div class="text-center">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <a href="mailto:tyler.harnaraine@torontomu.ca">
+          <div class="r-icon"> <i class="far fa-envelope"></i></div>
+        </a>
+        <div class="text-center">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.linkedin.com/in/tylerharnaraine/">
+          <div class="r-icon"> <i class="fab fa-linkedin"></i></div>
+        </a>
+        <div class="text-center">
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <form>
+          <div class="form-row way-fade-left">
+            <div class="form-group col-md-6">
+
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group col-md-6">
+
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group way-fade-left">
+            <input type="text" class="form-control" placeholder="Subject">
+          </div>
+          <div class="form-group way-fade-left">
+            <textarea class="form-control" rows="7" placeholder="Your Message" style="resize:none;"></textarea>
+          </div>
+
+          <button type="submit" class="btn r-btn float-right way-fade-left">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- footer -->
+  <footer>
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="row">
+        <div class="col">
+          <div class="r-icon text-center mt-3">
+            <ul>
+              <li class="list-inline-item animated slideInUp"><a href="https://www.linkedin.com/in/tylerharnaraine"><i class="fab fa-linkedin"></i></a></li>
+              <li class="list-inline-item animated slideInUp"><a href="#"><i class="fas fa-mobile-alt"></i></a></li>
+              <li class="list-inline-item animated slideInUp"><a href="mailto:tyler.harnaraine@torontomu.ca"><i class="far fa-envelope"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src="lib/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/jquery.smooth-scroll.js"></script>
+  <script src="lib/imagesloaded.pkgd.min.js"></script>
+  <script src="lib/owl.carousel.min.js"></script>
+  <script src="lib/typed.js"></script>
+  <script src="lib/jquery.waypoints.min.js"></script>
+  <script src="lib/jquery.filterizr.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

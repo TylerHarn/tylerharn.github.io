@@ -1,0 +1,629 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+p {
+  font-family: 'Poppins';
+  font-size: 20px;
+  line-height: 30px;
+  color: black;
+
+}
+
+.r-btn {
+  padding: 5px 20px;
+  background-color: purple !important;
+  color: white !important;
+}
+
+::selection {
+  background-color: #ee8683;
+  color: #fff;
+  /* text-shadow: 4px 2px 2px #FFFD3A; */
+}
+
+.r-p {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.content-mg {
+  margin: 10px 0;
+}
+.content-box * + * {
+  margin: 20px 0;
+}
+.bg-sec {
+  background: #f8f9fa;
+}
+.title-box {
+  max-width: 600px;
+  text-align: center;
+}
+
+
+
+.preloader:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #000;
+  transition: 1s;
+}
+.preloader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #000;
+  transition: 1s;
+}
+
+.preloader.complete:before {
+  bottom: -50%;
+}
+.preloader.complete:after {
+  top: -50%;
+}
+
+.preloader.complete {
+  visibility: hidden;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid rgba(255, 255, 255, 0.1);
+  border-top: 10px solid purple;
+  animation: animate 1.5s infinite linear;
+  z-index: 99999;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Navigation---------------------------------------------------------------------------- */
+nav .navbar-brand {
+  font-size: 30px;
+  color: #fff;
+  transition: 0.5s all;
+}
+nav .navbar-nav li {
+  margin-left: 15px;
+}
+nav .navbar-nav li a {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+}
+nav.r-nav {
+  background: black;
+  padding: 20px 0px;
+  transition: 0.5s all;
+}
+
+nav.r-nav.stickyadd {
+  background: #fff !important;
+  padding: 15px 0;
+  box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.05);
+  transition: 0.5s all ease-in-out;
+}
+nav.stickyadd .navbar-brand {
+  color: #000;
+  font-size: 40px;
+  transition: 0.5s all;
+}
+nav.stickyadd .navbar-nav .nav-link {
+  color: #000 !important;
+}
+.navbar .hamburger {
+  color: #fff;
+}
+nav.stickyadd .hamburger {
+  color: #000;
+}
+
+nav *,
+header * {
+  animation-delay: 0.5s;
+}
+
+/* ---------- */
+
+/* Header -----------------------------------------------------------------------*/
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/IT\ background\ image\ 2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content-box {
+  max-width: 700px;
+  color: #fff;
+}
+.content-box h4 {
+  font-size: 30px;
+}
+.content-box h1 {
+  font-size: 52px;
+}
+.content-box a {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 5px 25px;
+}
+.content-box p {
+  color: #fff;
+}
+.content-box a:hover {
+  color: #000;
+  background: #fff;
+  transition: 0.5s all;
+}
+
+/* About Us */
+
+.about li a {
+  color: black;
+  display: inline-block;
+  height: 42px;
+  width: 42px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+  line-height: 40px;
+  transition: 0.5s all;
+  text-align: center;
+}
+
+.about li a:hover {
+  color: #ee8683;
+}
+
+/* Experience ---------------------------------------------------------*/
+.experience .progress {
+  height: 10px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.progress-color {
+  background-color: #ee8683 !important;
+}
+.experience label {
+  font-size: 20px;
+  margin: 10px;
+}
+
+/* Service */
+
+.card,
+.card-header {
+  background:whitesmoke!important;
+}
+
+.card-header {
+  border: none !important;
+}
+
+.services .card-header i {
+  font-size: 50px;
+}
+.service-border {
+  height: 2px;
+  width: 40px;
+  margin: 15px auto;
+  background: #e65f78;
+  transition: 0.5s all;
+}
+.services h5:hover + .service-border {
+  width: 100px;
+}
+
+.services p {
+  font-size: 16px;
+}
+
+.services .btn:hover {
+  color: #000 !important;
+  background: #eee !important;
+}
+
+
+/* Work */
+.work .card-wrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* Contact */
+.contact .r-icon {
+  font-size: 50px;
+  text-align: center;
+  color: #00aeff;
+}
+
+/* footer */
+footer {
+  height: 150px;
+  background-color: black;
+}
+footer .r-icon a {
+  font-size: 20px;
+  color: #00aeff;
+  padding: 10px;
+  border: 1px solid #00aeff;
+  border-radius: 50%;
+}
+footer .r-icon a:hover {
+  border: 1px solid #eee;
+  color: #eee;
+  transition: 0.5s all;
+}
+/* Media-------------------------------------------------------------------------------- */
+@media (min-width: 200px) and (max-width: 768px) {
+  .r-nav {
+    background: #fff !important;
+  }
+  .r-nav .container {
+    width: 85%;
+  }
+  nav .navbar-brand {
+    font-size: 30px;
+    color: #000;
+  }
+  .navbar .hamburger {
+    color: #000;
+  }
+  nav .navbar-nav .nav-link {
+    color: #000 !important;
+  }
+
+  .content-box h1 {
+    font-size: 30px;
+  }
+  .content-box p {
+    font-size: 16px;
+  }
+  header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../images/IT\ background\ image\ mobile\ .jpeg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: -700px 0;
+  }
+}
+
+/* 
+Cards flipping boxes and animaiton */
+.img-fluid {
+  max-width: 100%; 
+  max-height: 400px; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+  border:  10px solid black; 
+  border-radius: 30%;
+}
+
+
+
+
+.card-wrapper {
+  perspective: 1000px;
+  margin-bottom: 30px; /* Add some space between cards */
+}
+
+.card-flip {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Set a fixed height to prevent overlapping */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-flip:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30%;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-flip.flipped {
+  transform: rotateY(180deg);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto; /* Remove max-height to prevent stretching */
+  display: block;
+  margin: 0 auto;
+  border: 10px solid black;
+  border-radius: 50%;
+}
+
+
+/* background of about me section */
+
+.custom-bg-color {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../images/Reversed\ Timeline\ Image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+  .project-card {
+    transition: transform 1s ease-in-out, box-shadow 0.5s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition-delay: 0.15s;
+  }
+  
+  .card-header {
+    font-size: 2rem;
+    
+  }
+  
+  .service-border {
+    margin: 1rem 0;
+    height: 2px;
+    background-color: blueviolet; /* Change to match your theme */
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+ #work {
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../images/6107094.jpg"); /* Update the path to your image */
+  height: 400;
+  width: 100%;
+  background-size: cover;
+ }
+
+  /* Projects Section */
+  .bg-sec {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/6107094.jpg"); /* Update the path to your image */
+    background-size: cover; /* Cover the entire section */
+  }
+ 
+   /* Contact Section */
+   .bg-sec2 {
+    background-color: white; /* Update the path to your image */
+    background-size: cover; /* Cover the entire section */
+
+  }
+ 
+  
+  .card-text {
+    color: #000000; /* Change this to your desired color */
+  }
+  
+
+/* About Section Cards */
+  .custom-card-color {
+    background-color: whitesmoke
+  }
+  
+
+/* TimeLine Code Source: */
+
+ :root{
+    --color1: #4e237c;
+    --color2: #6a2e88;
+} 
+
+
+.timeline-section {
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../images/Reversed\ Timeline\ Image.png");
+  background-size: cover; /* This will ensure your image covers the entire section */
+  background-position: center; /* This will center your image in the section */
+  background-repeat: no-repeat; /* This will prevent the image from repeating */
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+
+.main-timeline {
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-timeline .timeline{
+    border-right: 10px solid var(--color1);
+    width: 50%;
+    padding: 10px 20px 10px 0;
+    box-shadow: 10px 0 var(--color2);
+    float: left;
+}
+.main-timeline .timeline-content{
+    text-align: center;
+    display: block;
+    position: relative;
+    border-radius: 10px 10px;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .timeline-content:before,
+.main-timeline .timeline-content:after{
+    content:"";
+    background: var(--color2);
+    width: 80px;
+    height: 3px;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: -120px;
+}
+.main-timeline .timeline-content:after{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    right: -125px;
+}
+.main-timeline .timeline-year{
+    color: white;
+    background:var(--color2);
+    font-size: 40px;
+    font-weight: bold;
+    padding: 3px 20px 2px;
+    border-radius: 100px;
+    border: 5px solid var(--color1);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: -300px;
+}
+.main-timeline .title{
+    color:#fff;
+    background: var(--color2);
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 10px 9px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    font-family: poppins;
+}
+.main-timeline .description{
+    color: black;
+    background:whitesmoke;;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 20px 10px;
+    border-radius: 0 0 10px 10px;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(even){
+    float: right; 
+    border: none;
+    border-left: 10px solid var(--color2);
+    box-shadow: -10px 0 var(--color1);
+    padding: 10px 0 10px 20px;
+    margin: 0 0 0 10px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:before{
+    right: auto; 
+    left: -120px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:after{
+    right: auto;
+    left: -125px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-year{
+    right: auto;
+    left: -300px;
+}
+.main-timeline .timeline:nth-child(2){
+    --color1: #14187e;
+    --color2: #3f43c4;
+}
+.main-timeline .timeline:nth-child(3){
+  --color1: #4e237c;
+  --color2: #6a2e88;
+}
+
+/* 
+Phone timeline display */
+
+@media screen and (max-width:767px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: 100%;
+        padding: 100px 0 20px 20px;
+        margin: 0 0 0 10px;
+        box-shadow: -10px 0 var(--color2);
+        border: none;
+        border-left: 10px solid var(--color1);
+        float: none;
+    }
+    .main-timeline .timeline-content:before,
+    .main-timeline .timeline-content:after,
+    .main-timeline .timeline:nth-child(even) .timeline-content:before,
+    .main-timeline .timeline:nth-child(even) .timeline-content:after{
+        top: -50px;
+        left: -20px;
+        width: 50px;
+    }
+    .main-timeline .timeline-content:after,
+    .main-timeline .timeline:nth-child(even) .timeline-content:after{
+        width: 15px;
+        right: auto;
+        left: 15px;
+    }
+    .main-timeline .timeline-year,
+    .main-timeline .timeline:nth-child(even) .timeline-year{
+        transform: translateX(-50%);
+        top: -85px;
+        left: 50%;
+        right: auto;
+    }
+}
