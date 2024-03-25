@@ -84,3 +84,79 @@ document.querySelectorAll('.card-flip').forEach(card => {
     card.classList.toggle('flipped');
   });
 });
+
+
+
+
+$(document).ready(function(){ 
+
+  // W and S navigation opposed to Tab
+  $(document).keydown(function(e) {
+    var $focused = $(':focus');
+    var $navLinks = $('.navbar-nav .nav-link');
+    var index = $navLinks.index($focused);
+
+    if (e.key === 's') { // s key 
+      if (index === -1 || index === $navLinks.length - 1) {
+        $navLinks.first().focus();
+      } else {
+        $navLinks.eq(index + 1).focus();
+      }
+      e.preventDefault(); 
+    } else if (e.key === 'w') { // w key 
+      if (index === -1 || index === 0) {
+        $navLinks.last().focus();
+      } else {
+        $navLinks.eq(index - 1).focus();
+      }
+      e.preventDefault(); 
+    }
+  });
+});
+
+//text to speech function - still working on it 
+// click on section to read
+const toggleTTSButton = document.getElementById('toggle-tts');
+let ttsEnabled = false;
+let currentUtterance = null;
+
+const speak = (text) => {
+  if (currentUtterance) {
+    speechSynthesis.cancel();
+  }
+  currentUtterance = new SpeechSynthesisUtterance(text);
+  speechSynthesis.speak(currentUtterance);
+};
+
+toggleTTSButton.addEventListener('click', () => {
+  ttsEnabled = !ttsEnabled;
+  toggleTTSButton.textContent = ttsEnabled ? 'Disable Text-to-Speech' : 'Enable Text-to-Speech';
+  if (!ttsEnabled && currentUtterance) {
+    speechSynthesis.cancel();
+    currentUtterance = null;
+  }
+});
+
+document.addEventListener('click', (event) => {
+  if (ttsEnabled) {
+    const section = event.target.closest('section');
+    if (section) {
+      const sectionTitleElement = section.querySelector('h2');
+      const sectionTitle = sectionTitleElement ? sectionTitleElement.textContent : '';
+      let sectionText = section.textContent;
+
+      if (sectionTitle) {
+        sectionText = sectionText.replace(sectionTitle, '').trim();
+      }
+
+      speak(sectionTitle + ' ' + sectionText);
+    }
+  }
+});
+
+document.addEventListener('dblclick', () => {
+  if (ttsEnabled && currentUtterance) {
+    speechSynthesis.cancel();
+    currentUtterance = null;
+  }
+});

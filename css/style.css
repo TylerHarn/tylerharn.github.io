@@ -301,7 +301,7 @@ footer .r-icon a:hover {
   transition: 0.5s all;
 }
 /* Media-------------------------------------------------------------------------------- */
-@media (min-width: 200px) and (max-width: 768px) {
+@media (min-width: 200px) and (max-width: 767px) {
   .r-nav {
     background: #fff !important;
   }
@@ -431,14 +431,16 @@ Cards flipping boxes and animaiton */
     margin-right: auto;
   }
   
+/* skills image  */
 
- #work {
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("../images/6107094.jpg"); /* Update the path to your image */
-  height: 400;
+#work {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/6107094.jpg");
+  min-height: 100vh; /* Minimum height to cover the full viewport height */
   width: 100%;
   background-size: cover;
- }
+  background-attachment: fixed; /* Optional: This will keep the background fixed during scroll */
+}
+
 
   /* Projects Section */
   .bg-sec {
@@ -451,6 +453,7 @@ Cards flipping boxes and animaiton */
    .bg-sec2 {
     background-color: white; /* Update the path to your image */
     background-size: cover; /* Cover the entire section */
+    
 
   }
  
@@ -483,6 +486,7 @@ Cards flipping boxes and animaiton */
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+
 }
 
 
@@ -592,6 +596,11 @@ Cards flipping boxes and animaiton */
   --color2: #6a2e88;
 }
 
+.main-timeline .timeline:nth-child(4){
+  --color1: #14187e;
+  --color2: #3f43c4;
+}
+
 /* 
 Phone timeline display */
 
@@ -605,6 +614,7 @@ Phone timeline display */
         border: none;
         border-left: 10px solid var(--color1);
         float: none;
+      
     }
     .main-timeline .timeline-content:before,
     .main-timeline .timeline-content:after,
@@ -623,8 +633,21 @@ Phone timeline display */
     .main-timeline .timeline-year,
     .main-timeline .timeline:nth-child(even) .timeline-year{
         transform: translateX(-50%);
-        top: -85px;
+        top: -110px;
         left: 50%;
         right: auto;
     }
+}
+
+#toggle-tts {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#toggle-tts:hover {
+  background-color: #45a049;
 }
