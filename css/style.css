@@ -651,3 +651,9 @@ Phone timeline display */
 #toggle-tts:hover {
   background-color: #45a049;
 }
+
+
+.description {
+  text-align: left;
+  list-style-position: inside;
+}
