@@ -49,7 +49,7 @@ p {
 }
 
 
-.preloader:before {
+/* .preloader:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -66,8 +66,8 @@ p {
   height: 50%;
   background-color: #000;
   transition: 1s;
-}
-
+} */
+/* 
 .preloader.complete:before {
   bottom: -50%;
 }
@@ -77,9 +77,9 @@ p {
 
 .preloader.complete {
   visibility: hidden;
-}
+} */
 
-.circle {
+/* .circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -100,7 +100,7 @@ p {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
-}
+} */ */
 
 
 /* navbar */
@@ -597,3 +597,4 @@ Phone timeline display */
   text-align: left;
   list-style-position: inside;
 }
+
