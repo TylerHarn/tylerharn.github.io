@@ -20,59 +20,67 @@
     <div class="circle"></div>
   </div>
 
-  <nav class="navbar navbar-expand-md  sticky  fixed-top r-nav">
-    <div class="container">
 
-      <a class="navbar-brand animated fadeInLeft" href="#">Tyler Harnaraine</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarId" >
-        <span><i class="fas fa-bars hamburger"></i></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarId">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item animated fadeInRight">
-            <a class="nav-link" href="#home">About <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item animated fadeInRight">
-            <a class="nav-link" href="#about">Experience</a>
-          </li>
-          <li class="nav-item animated fadeInRight">
-            <a class="nav-link" href="#services">Projects</a>
-          </li>
-          <li class="nav-item animated fadeInRight">
-            <a class="nav-link" href="#work">Skills</a>
-          </li>
-          <li class="nav-item animated fadeInRight">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+<!-- navigation -->
+<nav class="navbar navbar-expand-md sticky fixed-top r-nav">
+  <div class="container">
+    <a class="navbar-brand animated fadeInLeft" href="#">Tyler Harnaraine</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarId">
+      <span><i class="fas fa-bars hamburger"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarId">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item animated fadeInRight">
+          <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item animated fadeInRight">
+          <a class="nav-link" href="#timeline">Experience</a>
+        </li>
+        <li class="nav-item animated fadeInRight">
+          <a class="nav-link" href="#services">Projects</a>
+        </li>
+        <li class="nav-item animated fadeInRight">
+          <a class="nav-link" href="#work">Certifications</a>
+        </li>
+        <li class="nav-item animated fadeInRight">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item animated fadeInRight">
+          <a class="nav-link" id="toggle-tts">
+            <img src="images/icons8-web-accessibility-30.png" alt="Toggle Text-to-Speech" style="width: 30px; height: 30px;">
+          </a>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-  </nav>
-  <header id="home">
-    <div class="container-fluid header-content">
+
+
+<!-- new header -->
+<header id="home" style="background-image: url('images/Gradient\ 2.webp'); background-size: cover; background-position: center;">
+  <div class="container-fluid header-content">
       <div class="row">
-        <div class="col">
-          <div class="content-box text-center animated fadeInUp">
-            <h4>Welcome</h4>
-            <h1>I'm <span class="element" style="color:#00aeff;font-weight:bold;"></span></h1>
-            <p>A Third-Year BTM Student at TMU</p>
-              <img src="images/cropped_image.png" alt="Cartoon avatar of a student with glasses using a laptop" class="img-fluid">
-            <a href="#experience" class="btn">About Me</a>
+          <div class="col">
+              <div class="content-box text-center animated fadeInUp">
+                  <h4>Welcome</h4>
+                  <h1>I'm <span class="element" style="color:#00aeff;;font-weight:bold;"></span></h1>
+                  <p>A Third-Year BTM Student at TMU</p>
+                  <img src="images/Profile Picture.png" alt="Cartoon avatar of a student with glasses using a laptop" class="img-fluid">
+                  <a href="#about" class="btn" style="background-color: white; color: black; border: 2px solid black;"> <strong>About Me</strong></a>
+                </div>
           </div>
-        </div>
       </div>
-    </div>
-  </header>
+  </div>
+</header>
+
+<div class="section-separator"></div>
 
 
-<section>
-  <!-- tts button toggler -->
-  <button id="toggle-tts">Enable Text-to-Speech</button> 
-</section>
-
-<section class="about r-p custom-bg-color" id="about">
+<!-- About me -->
+<section class="about r-p custom-bg-color" id="about" style="background-image: url('images/Reversed\ Timeline\ Image.png'); background-size: cover; background-position: center;">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-12 way-fade-up">
@@ -84,15 +92,20 @@
             <h2 class="card-title text-center">About Me</h2>
             <br>
             <p class="card-text text-center">Hi! I'm <strong>Tyler Harnaraine</strong>, a third-year <strong>Business Technology Management</strong> student at <strong>Toronto Metropolitan University</strong>, pursuing a career in Information Technology.</p>
-            <p class="card-text text-center">My coursework has equipped me with a strong foundation in areas such as IT Infrastructure, Business systems analysis, and programming. I'm excited to continue exploring the intersection of business and technology as I progress in my studies.</p>
             <br>
+            <p class="card-text text-center">My journey in tech began with building custom PCs and has since expanded to include roles such as <strong>IT Coordinator</strong> and <strong>IT Experience Consultant</strong>. These experiences have deepened my understanding of IT infrastructure, cybersecurity, and the pivotal role of technology in business.
+              <br>
+            <p class="card-text text-center"> As I continue my journey, I'm eager to further develop my skills and make contributions to the world of technology.
           </div>
         </div>
       </div>
-  </section>
+    </div>
+</section>
+
+<div class="section-separator"></div>
 
 
-  <section class="timeline-section">
+  <section id="timeline" class="timeline-section">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -157,6 +170,7 @@
   </section>
   
 
+<div class="section-separator"></div>
   
 
  <!-- Projects -->
@@ -251,6 +265,7 @@
 </section>
 
 
+<div class="section-separator"></div>  
 
 
 <!--  Certifications -->
@@ -376,16 +391,16 @@
   </div>
 </section>
 
+<div class="section-separator"></div>
 
+<!-- formspree working form -->
 
-<!-- formspree -->
-
-<section class="contact r-p bg-sec2" id="contact">
+<section class="contact r-p bg-sec2" id="contact" style="background-image: url('images/Gradient\ 2.webp'); background-size: cover; background-position: center;">
   <div class="container text-center">
     <div class="row">
       <div class="col way-fade-left">
-        <h2>Contact Me</h2>
-        <p>Have Questions or Want to Connect? <br>
+        <h2 style="color: whitesmoke;">Contact Me</h2>
+        <p style="color: whitesmoke;">Have Questions or Want to Connect? <br>
           Feel Free To Leave a Message Below</p>
       </div>
     </div>

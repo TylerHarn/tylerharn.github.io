@@ -15,12 +15,12 @@ h6 {
   
 }
 
+
 p {
   font-family: 'Poppins';
   font-size: 20px;
   line-height: 30px;
   color: black;
-
 }
 
 .r-btn {
@@ -29,16 +29,11 @@ p {
   color: white !important;
 }
 
-::selection {
-  background-color: #ee8683;
-  color: #fff;
-  /* text-shadow: 4px 2px 2px #FFFD3A; */
+.r-p {
+  padding-top: 125px;
+  padding-bottom: 125px;
 }
 
-.r-p {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
 .content-mg {
   margin: 10px 0;
 }
@@ -52,7 +47,6 @@ p {
   max-width: 600px;
   text-align: center;
 }
-
 
 
 .preloader:before {
@@ -108,14 +102,16 @@ p {
   }
 }
 
-/* Navigation---------------------------------------------------------------------------- */
+
+/* navbar */
+
 nav .navbar-brand {
   font-size: 30px;
   color: #fff;
   transition: 0.5s all;
 }
 nav .navbar-nav li {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 nav .navbar-nav li a {
   color: rgba(255, 255, 255, 0.8) !important;
@@ -156,17 +152,17 @@ header * {
   animation-delay: 0.5s;
 }
 
-/* ---------- */
+.section-separator {
+  height: 10px;
+  background-color: black;
+  width: 100%;
+}
 
-/* Header -----------------------------------------------------------------------*/
+/* header */
+
 header {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/IT\ background\ image\ 2.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   padding-top: 75px;
 }
 .header-content {
@@ -202,41 +198,10 @@ header {
   transition: 0.5s all;
 }
 
-/* About Us */
 
-.about li a {
-  color: black;
-  display: inline-block;
-  height: 42px;
-  width: 42px;
-  font-size: 20px;
-  border-radius: 50%;
-  border: 2px solid black;
-  line-height: 40px;
-  transition: 0.5s all;
-  text-align: center;
-}
 
-.about li a:hover {
-  color: #ee8683;
-}
 
-/* Experience ---------------------------------------------------------*/
-.experience .progress {
-  height: 10px;
-  border-radius: 20px;
-  font-size: 10px;
-}
-
-.progress-color {
-  background-color: #ee8683 !important;
-}
-.experience label {
-  font-size: 20px;
-  margin: 10px;
-}
-
-/* Service */
+/* Projects */
 
 .card,
 .card-header {
@@ -254,7 +219,6 @@ header {
   height: 2px;
   width: 40px;
   margin: 15px auto;
-  background: #e65f78;
   transition: 0.5s all;
 }
 .services h5:hover + .service-border {
@@ -328,9 +292,6 @@ footer .r-icon a:hover {
   header {
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("images/AI\ image\ enchaned\ for\ 2nd\ background.webp");
-    background-repeat: repeat;
     background-size: cover;
     background-position: -700px 0;
   }
@@ -347,9 +308,6 @@ Cards flipping boxes and animaiton */
   border:  10px solid black; 
   border-radius: 30%;
 }
-
-
-
 
 .card-wrapper {
   perspective: 1000px;
@@ -393,20 +351,6 @@ Cards flipping boxes and animaiton */
   border-radius: 50%;
 }
 
-
-/* background of about me section */
-
-.custom-bg-color {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("../images/Reversed\ Timeline\ Image.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-
-
-
   .project-card {
     transition: transform 1s ease-in-out, box-shadow 0.5s ease-in-out;
   }
@@ -434,7 +378,7 @@ Cards flipping boxes and animaiton */
 /* skills image  */
 
 #work {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/6107094.jpg");
+  background-image:  url("../images/6107094.jpg");
   min-height: 100vh; /* Minimum height to cover the full viewport height */
   width: 100%;
   background-size: cover;
@@ -444,8 +388,8 @@ Cards flipping boxes and animaiton */
 
   /* Projects Section */
   .bg-sec {
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/6107094.jpg"); /* Update the path to your image */
+    background-image: 
+    url("../images/Reversed\ Timeline\ Image.png"); /* Update the path to your image */
     background-size: cover; /* Cover the entire section */
   }
  
@@ -453,8 +397,6 @@ Cards flipping boxes and animaiton */
    .bg-sec2 {
     background-color: white; /* Update the path to your image */
     background-size: cover; /* Cover the entire section */
-    
-
   }
  
   
@@ -465,7 +407,7 @@ Cards flipping boxes and animaiton */
 
 /* About Section Cards */
   .custom-card-color {
-    background-color: whitesmoke
+    background-color: whitesmoke;
   }
   
 
@@ -478,13 +420,13 @@ Cards flipping boxes and animaiton */
 
 
 .timeline-section {
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image:  
   url("../images/Reversed\ Timeline\ Image.png");
   background-size: cover; /* This will ensure your image covers the entire section */
   background-position: center; /* This will center your image in the section */
   background-repeat: no-repeat; /* This will prevent the image from repeating */
   width: 100%;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 50px;
 
 }
@@ -640,18 +582,16 @@ Phone timeline display */
 }
 
 #toggle-tts {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-#toggle-tts:hover {
-  background-color: #45a049;
+#toggle-tts i {
+  color: none; /* Adjust the color of the icon */
 }
 
+#toggle-tts:hover i {
+  color: #555; /* Adjust the hover color of the icon */
+}
 
 .description {
   text-align: left;

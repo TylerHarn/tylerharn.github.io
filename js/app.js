@@ -72,7 +72,14 @@ $(document).ready(function(){
 
   $('a').smoothScroll({
     speed:2000,
+    offset: -110, // Adjust this value according to your navbar height or desired offset
+
   });
+
+  $('.navbar-nav .nav-link').click(function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
 
 });
 
