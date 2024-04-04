@@ -1,5 +1,32 @@
 $(document).ready(function(){
 
+
+
+  // Function to check if the user is on a mobile device
+function isMobileDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints;
+}
+
+// Add event listeners based on the device
+document.querySelectorAll('.card-flip').forEach(card => {
+  if (isMobileDevice()) {
+    // For mobile devices, add a click event listener
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  } else {
+    // For desktop, add a mouseenter event listener to flip the card
+    card.addEventListener('mouseenter', () => {
+      card.classList.add('flipped');
+    });
+    // Add a mouseleave event listener to unflip the card
+    card.addEventListener('mouseleave', () => {
+      card.classList.remove('flipped');
+    });
+  }
+});
+
+
   $(window).on('load',function(){
     $('.preloader').addClass('complete')
   });
@@ -72,7 +99,7 @@ $(document).ready(function(){
 
   $('a').smoothScroll({
     speed:2000,
-    offset: -110, // Adjust this value according to your navbar height or desired offset
+    offset: -110, 
 
   });
 

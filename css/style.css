@@ -331,6 +331,14 @@ Cards flipping boxes and animaiton */
 }
 
 
+@media (max-width: 768px) {
+  #work {
+    background-image: url("../images/vertical\ image.jpeg"); /* Specify the mobile background image */
+    background-attachment: scroll; /* Use scroll instead of fixed for mobile */
+  }
+}
+
+
   /* Projects Section */
   .bg-sec {
     background-image: 
