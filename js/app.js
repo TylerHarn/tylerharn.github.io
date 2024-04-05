@@ -96,23 +96,22 @@ document.querySelectorAll('.card-flip').forEach(card => {
 
 
 
-
 $(document).ready(function(){ 
 
-  // W and S navigation opposed to Tab
+  // Up and Down arrow navigation
   $(document).keydown(function(e) {
     var $focused = $(':focus');
     var $navLinks = $('.navbar-nav .nav-link');
     var index = $navLinks.index($focused);
 
-    if (e.key === 's') { // s key 
+    if (e.key === 'ArrowDown') { // Down arrow key 
       if (index === -1 || index === $navLinks.length - 1) {
         $navLinks.first().focus();
       } else {
         $navLinks.eq(index + 1).focus();
       }
       e.preventDefault(); 
-    } else if (e.key === 'w') { // w key 
+    } else if (e.key === 'ArrowUp') { // Up arrow key 
       if (index === -1 || index === 0) {
         $navLinks.last().focus();
       } else {
