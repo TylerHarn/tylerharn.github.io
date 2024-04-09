@@ -375,9 +375,9 @@ Cards flipping boxes and animaiton */
 .timeline-section {
   background-image:  
   url("../images/Reversed\ Timeline\ Image.png");
-  background-size: cover; /* This will ensure your image covers the entire section */
-  background-position: center; /* This will center your image in the section */
-  background-repeat: no-repeat; /* This will prevent the image from repeating */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   width: 100%;
   padding-top: 100px;
   padding-bottom: 50px;
