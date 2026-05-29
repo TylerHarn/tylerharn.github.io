@@ -168,3 +168,56 @@ document.addEventListener('dblclick', () => {
     currentUtterance = null;
   }
 });
+
+
+
+const WORKER_URL = "https://tyler-port-chat.tyler-harnaraine.workers.dev/";
+
+function appendMessage(sender, text) {
+  const chatWindow = document.getElementById("chat-window");
+  const msg = document.createElement("div");
+  msg.style.marginBottom = "10px";
+  msg.style.fontSize = "0.85rem";
+  msg.innerHTML = `<strong style="color: ${sender === 'You' ? '#00aeff' : '#333'}">${sender}:</strong> <span style="color: #444">${text}</span>`;
+  chatWindow.appendChild(msg);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+
+async function sendMessage(message) {
+  if (!message.trim()) return;
+  document.getElementById("chat-input").value = "";
+
+  // Clear placeholder on first message
+  const chatWindow = document.getElementById("chat-window");
+  if (chatWindow.querySelector("p")) chatWindow.innerHTML = "";
+
+  appendMessage("You", message);
+  appendMessage("Tyler's AI", "Thinking...");
+
+  try {
+    const res = await fetch(WORKER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userMessage: message }),
+    });
+    const data = await res.json();
+    chatWindow.lastChild.innerHTML = `<strong style="color: #333">Tyler's AI:</strong> <span style="color: #444">${data.reply}</span>`;
+    chatWindow.lastChild.style.fontSize = "0.85rem";
+  } catch (err) {
+    chatWindow.lastChild.innerHTML = `<strong style="color: red">Error:</strong> <span style="color: #444">Something went wrong. Please try again.</span>`;
+  }
+}
+
+$(document).ready(function () {
+  $("#chat-send").on("click", function () {
+    sendMessage($("#chat-input").val());
+  });
+
+  $("#chat-input").on("keypress", function (e) {
+    if (e.key === "Enter") sendMessage($(this).val());
+  });
+
+  $(".suggested-q").on("click", function () {
+    sendMessage($(this).text());
+  });
+});
