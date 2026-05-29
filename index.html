@@ -74,72 +74,83 @@
 
 <div class="section-separator"></div>
 
-
-
 <!-- About me -->
 <section class="about r-p custom-bg-color" id="about" style="background-image: url('images/Reversed Timeline Image.png'); background-size: cover; background-position: center;">
   <div class="container">
-    <div class="row align-items-stretch">
 
-      <!-- Chatbot (left) -->
-      <div class="col-lg-6 col-md-12 way-fade-up d-flex">
-        <div class="card custom-card-color text-black w-100">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title text-center">Ask About Me</h5>
-            <p class="text-center" style="font-size: 0.85rem; color: #666;">Ask anything about my experience, skills, or projects.</p>
+    <!-- Top row: About Me card full width -->
+    <div class="row mb-4">
+      <div class="col way-fade-up">
+        <div class="card w-100" style="background: rgba(255,255,255,0.92); border: none; border-radius: 12px;">
+          <div class="card-body" style="padding: 2rem;">
+            <h2 class="card-title text-center" style="font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 600; color: #000;">About Me</h2>
+            <br>
+            <p class="card-text text-center" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #000;">Hi! I'm <strong>Tyler Harnaraine, a recent graduate of the Business Technology Management Toronto Metropolitan University</strong>, pursuing a career in Information Technology.</p>
+            <br>
+            <p class="card-text text-center" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #000;">My journey in tech began with building custom PCs and has since expanded to include roles such as <strong>IT Coordinator, IT Experience Consultant, System Engineer, and most recenlty System Administrator</strong>. These experiences have deepened my understanding of IT infrastructure, cybersecurity, and the pivotal role of technology in business.</p>
+            <br>
+            <p class="card-text text-center" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #000;">As I continue my journey, I'm eager to further develop my skills and make contributions to the world of technology.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- Suggested questions -->
-            <div class="text-center mb-3">
-              <button class="btn btn-sm r-btn m-1 suggested-q">Work experience?</button>
-              <button class="btn btn-sm r-btn m-1 suggested-q">Top skills?</button>
-              <button class="btn btn-sm r-btn m-1 suggested-q">Projects?</button>
-              <button class="btn btn-sm r-btn m-1 suggested-q">Certifications?</button>
+    <!-- Bottom row: Chatbot card matching About Me style -->
+    <div class="row">
+      <div class="col way-fade-up">
+        <div class="card w-100" style="background: rgba(255,255,255,0.92); border: none; border-radius: 12px;">
+          <div class="card-body" style="padding: 1.5rem;">
+
+            <div class="d-flex align-items-center mb-3">
+              <div style="width: 10px; height: 10px; background: #00aeff; border-radius: 50%; margin-right: 8px; box-shadow: 0 0 6px #00aeff;"></div>
+              <span style="color: #000000; font-weight: 600; font-size: 1rem; font-family: 'Poppins', sans-serif;"> Want to Learn more? Ask My AI (TulerAI)</span>
             </div>
 
             <!-- Chat window -->
             <div id="chat-window" style="
-              flex: 1;
-              background: rgba(0,0,0,0.05);
+              background: rgba(193, 222, 250, 0.918);
               border-radius: 8px;
-              height: 220px;
+              height: 140px;
               overflow-y: auto;
-              padding: 12px;
+              padding: 14px;
               margin-bottom: 12px;
               text-align: left;
+              font-family: 'Poppins', sans-serif;
+              font-size: 1rem;
+              color: #000;
             ">
-              <p style="color: #888; font-style: italic; font-size: 0.85rem;">Ask me anything about Tyler's background...</p>
+              <div style="font-size: 1rem; font-family: 'Poppins', sans-serif;">
+                <strong style="color: #00aeff;">Tyler's AI:</strong>
+                <span style="color: rgba(0, 0, 0, 0.952);"> <strong>Hi! 👋 Ask me anything about Tyler's experience, skills, projects, or certifications.</strong></span>
+              </div>
             </div>
 
-            <!-- Input -->
-            <div class="input-group">
-              <input type="text" id="chat-input" class="form-control" placeholder="Type your question...">
-              <div class="input-group-append">
-                <button class="btn r-btn" id="chat-send">Send</button>
+            <!-- Suggested questions + input on same row -->
+            <div class="d-flex flex-wrap align-items-center" style="gap: 8px;">
+              <button class="suggested-q" style="background: rgb(0,0,0); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: pointer;">Top skills?</button>
+              <button class="suggested-q" style="background: rgb(0,0,0); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: pointer;">Projects?</button>
+              <button class="suggested-q" style="background: rgb(0,0,0); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: pointer;">Certifications?</button>
+
+              <!-- Input inline -->
+              <div class="input-group flex-grow-1" style="min-width: 250px;">
+                <input type="text" id="chat-input" class="form-control"
+                  placeholder="Type your question..."
+                  style="background: #fff; border: 2px solid #00aeff; color: #030303; border-radius: 8px 0 0 8px; outline: none; box-shadow: none; font-family: 'Poppins', sans-serif; font-size: 1rem;">
+                <div class="input-group-append">
+                  <button class="btn" id="chat-send"
+                    style="background: #00aeff; color: #fff; border-radius: 0 8px 8px 0; font-weight: 600; font-family: 'Poppins', sans-serif; font-size: 1rem;">Send</button>
+                </div>
               </div>
             </div>
 
           </div>
         </div>
       </div>
-
-      <!-- About Me Card (right) -->
-      <div class="col-lg-6 col-md-12 way-fade-up mt-5 mt-lg-0 d-flex">
-        <div class="card custom-card-color text-black w-100">
-          <div class="card-body">
-            <h2 class="card-title text-center">About Me</h2>
-            <br>
-            <p class="card-text text-center">Hi! I'm <strong>Tyler Harnaraine</strong>, a third-year <strong>Business Technology Management</strong> student at <strong>Toronto Metropolitan University</strong>, pursuing a career in Information Technology.</p>
-            <br>
-            <p class="card-text text-center">My journey in tech began with building custom PCs and has since expanded to include roles such as <strong>IT Coordinator</strong> and <strong>IT Experience Consultant</strong>. These experiences have deepened my understanding of IT infrastructure, cybersecurity, and the pivotal role of technology in business.
-              <br>
-            <p class="card-text text-center"> As I continue my journey, I'm eager to further develop my skills and make contributions to the world of technology.
-          </div>
-        </div>
-      </div>
-
     </div>
+
   </div>
 </section>
+
 
 
 <div class="section-separator"></div>
@@ -371,6 +382,17 @@
           </div>
         </div>
 
+         <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="2">
+          <div class="card-flip">
+            <div class="card-front">
+              <img src="images/az900 image.png" class="img-fluid" alt="Image of ISC logo with the title CC">
+            </div>
+            <div class="card-back">
+              <img src="images/ISC2 Contents.png" class="img-fluid" alt="Summary - Access Control Concepts • Business Continuity & Disaster Recovery Concepts, Network Security , Security Operations, Incident Response Concepts, Risk Management">
+            </div>
+          </div>
+        </div>
+
 
        
         <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="2">
@@ -459,6 +481,8 @@
     </div>
   </div>
 </section>
+
+
 
 
 <div class="section-separator"></div>
