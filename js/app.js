@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-
-
   $(window).on('load',function(){
     $('.preloader').addClass('complete')
   });
@@ -16,7 +14,6 @@ $(document).ready(function(){
     }
   });
 
-  // adding fadeInUp animation to child of div with class .way-col
   var $child = $('.way-fade-up').children();
   $child.each(function(){
     var self= $(this);
@@ -41,7 +38,6 @@ $(document).ready(function(){
     },{offset: '90%'});
   });
 
-  // Adding animation to timeline
   $('.timeline').each(function(){
     var self = $(this);
     self.waypoint(function(){
@@ -74,56 +70,44 @@ $(document).ready(function(){
 
   $('a').smoothScroll({
     speed:2000,
-    offset: -110, 
-
+    offset: -110,
   });
 
   $('.navbar-nav .nav-link').click(function(){
     $('.navbar-collapse').collapse('hide');
-});
-
-
-});
-
-
-
-// flip animation
-document.querySelectorAll('.card-flip').forEach(card => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('flipped');
   });
+
 });
 
 
+$(document).ready(function(){
 
-$(document).ready(function(){ 
-
-  // Up and Down arrow navigation
   $(document).keydown(function(e) {
     var $focused = $(':focus');
     var $navLinks = $('.navbar-nav .nav-link');
     var index = $navLinks.index($focused);
 
-    if (e.key === 'ArrowDown') { // Down arrow key 
+    if (e.key === 'ArrowDown') {
       if (index === -1 || index === $navLinks.length - 1) {
         $navLinks.first().focus();
       } else {
         $navLinks.eq(index + 1).focus();
       }
-      e.preventDefault(); 
-    } else if (e.key === 'ArrowUp') { // Up arrow key 
+      e.preventDefault();
+    } else if (e.key === 'ArrowUp') {
       if (index === -1 || index === 0) {
         $navLinks.last().focus();
       } else {
         $navLinks.eq(index - 1).focus();
       }
-      e.preventDefault(); 
+      e.preventDefault();
     }
   });
+
 });
 
-//text to speech function - still working on it 
-// click on section to read
+
+// Text to speech
 const toggleTTSButton = document.getElementById('toggle-tts');
 let ttsEnabled = false;
 let currentUtterance = null;
@@ -152,11 +136,9 @@ document.addEventListener('click', (event) => {
       const sectionTitleElement = section.querySelector('h2');
       const sectionTitle = sectionTitleElement ? sectionTitleElement.textContent : '';
       let sectionText = section.textContent;
-
       if (sectionTitle) {
         sectionText = sectionText.replace(sectionTitle, '').trim();
       }
-
       speak(sectionTitle + ' ' + sectionText);
     }
   }
@@ -170,7 +152,7 @@ document.addEventListener('dblclick', () => {
 });
 
 
-
+// ========== Chatbot ==========
 const WORKER_URL = "https://tyler-port-chat.tyler-harnaraine.workers.dev/";
 
 function appendMessage(sender, text) {
@@ -187,7 +169,6 @@ async function sendMessage(message) {
   if (!message.trim()) return;
   document.getElementById("chat-input").value = "";
 
-  // Clear placeholder on first message
   const chatWindow = document.getElementById("chat-window");
   if (chatWindow.querySelector("p")) chatWindow.innerHTML = "";
 
@@ -221,3 +202,4 @@ $(document).ready(function () {
     sendMessage($(this).text());
   });
 });
+// ========== End Chatbot ==========
