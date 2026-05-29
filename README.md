@@ -22,6 +22,7 @@ This portfolio was built to highlight my journey in IT, from building custom PCs
 - jQuery
 - Groq API (via Cloudflare Worker)
 - Formspree
+- Google Analytics
 
 ## Contact
 - Email: tyler.harnaraine@gmail.com
