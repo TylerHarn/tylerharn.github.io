@@ -6,7 +6,7 @@ A personal portfolio website was orginally started as a lab for my web design cl
 [tylerharn.github.io](https://tylerharn.github.io)
 
 ## About
-This portfolio was built to highlight my journey in IT — from building custom PCs to working as a Systems Administrator. It covers my professional experience, personal home lab projects, and technical certifications.
+This portfolio was built to highlight my journey in IT, from building custom PCs to working as a Systems Administrator. It covers my professional experience, personal home lab projects, and technical certifications.
 
 ## Features
 - **TulerAI Chatbot** — an AI assistant powered by Groq that answers questions about my background in real time. This is the most addition, and required a CloudFlare worker since Github Pages is a static site with no backend. 
@@ -24,5 +24,5 @@ This portfolio was built to highlight my journey in IT — from building custom 
 - Formspree
 
 ## Contact
-- Email: tyler.harnaraine@torontomu.ca
+- Email: tyler.harnaraine@gmail.com
 - LinkedIn: [linkedin.com/in/tylerharnaraine](https://linkedin.com/in/tylerharnaraine)
