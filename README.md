@@ -1,6 +1,6 @@
-# Tyler Harnaraine — Personal Portfolio
+# My Personal Portfolio
 
-A personal portfolio website was orginally started as a lab for my web design class, but has since evovlied into a showcase of my IT experinece, projects, and a playground for me to learn and tests new concepts. 
+This personal portfolio website was orginally started as a lab for my web design class, but has since evovlied into a showcase of my IT experinece, projects, and a playground for me to learn and tests new concepts. 
 
 ## Live Site
 [tylerharn.github.io](https://tylerharn.github.io)
