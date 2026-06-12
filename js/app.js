@@ -1,8 +1,10 @@
 $(document).ready(function(){
 
+
   $(window).on('load',function(){
     $('.preloader').addClass('complete')
   });
+
 
   $(window).on('scroll',function(){
     var scroll = $(window).scrollTop();
@@ -14,6 +16,7 @@ $(document).ready(function(){
     }
   });
 
+
   var $child = $('.way-fade-up').children();
   $child.each(function(){
     var self= $(this);
@@ -21,6 +24,7 @@ $(document).ready(function(){
       self.addClass('animated fadeInUp');
     },{offset: '90%'});
   });
+
 
   var $child = $('.way-fade-left').children();
   $child.each(function(){
@@ -30,6 +34,7 @@ $(document).ready(function(){
     },{offset: '90%'});
   });
 
+
   var $child = $('.way-fade-right').children();
   $child.each(function(){
     var self= $(this);
@@ -38,12 +43,14 @@ $(document).ready(function(){
     },{offset: '90%'});
   });
 
+
   $('.timeline').each(function(){
     var self = $(this);
     self.waypoint(function(){
       self.addClass('animated fadeInLeft');
     },{offset: '90%'});
   });
+
 
   $('.owl-carousel').owlCarousel({
       loop:true,
@@ -54,9 +61,11 @@ $(document).ready(function(){
       animateIn : "fadeInRight"
   });
 
+
   var filterizd = $('.filter-container').filterizr({
     animationDuration: .5,
   });
+
 
   var typed = new Typed(".element", {
     strings: ["Tyler Harnaraine"],
@@ -68,24 +77,44 @@ $(document).ready(function(){
     startDelay: 1000
   });
 
+
   $('a').smoothScroll({
     speed:2000,
     offset: -110,
   });
 
+
   $('.navbar-nav .nav-link').click(function(){
     $('.navbar-collapse').collapse('hide');
+  });
+
+
+  // CHANGED: Certification cards — click (and Enter/Space keyboard) to toggle flip
+  // Removed hover-based flip; .flipped class is toggled on click instead
+  $('.card-flip').on('click', function () {
+    $(this).toggleClass('flipped');
+  });
+
+  // ADDED: keyboard support — pressing Enter or Space also flips the card
+  $('.card-flip').on('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      $(this).toggleClass('flipped');
+    }
   });
 
 });
 
 
+
 $(document).ready(function(){
+
 
   $(document).keydown(function(e) {
     var $focused = $(':focus');
     var $navLinks = $('.navbar-nav .nav-link');
     var index = $navLinks.index($focused);
+
 
     if (e.key === 'ArrowDown') {
       if (index === -1 || index === $navLinks.length - 1) {
@@ -104,13 +133,16 @@ $(document).ready(function(){
     }
   });
 
+
 });
+
 
 
 // Text to speech
 const toggleTTSButton = document.getElementById('toggle-tts');
 let ttsEnabled = false;
 let currentUtterance = null;
+
 
 const speak = (text) => {
   if (currentUtterance) {
@@ -120,6 +152,7 @@ const speak = (text) => {
   speechSynthesis.speak(currentUtterance);
 };
 
+
 toggleTTSButton.addEventListener('click', () => {
   ttsEnabled = !ttsEnabled;
   toggleTTSButton.textContent = ttsEnabled ? 'Disable Text-to-Speech' : 'Enable Text-to-Speech';
@@ -128,6 +161,7 @@ toggleTTSButton.addEventListener('click', () => {
     currentUtterance = null;
   }
 });
+
 
 document.addEventListener('click', (event) => {
   if (ttsEnabled) {
@@ -144,6 +178,7 @@ document.addEventListener('click', (event) => {
   }
 });
 
+
 document.addEventListener('dblclick', () => {
   if (ttsEnabled && currentUtterance) {
     speechSynthesis.cancel();
@@ -151,8 +186,10 @@ document.addEventListener('dblclick', () => {
   }
 });
 
+
 // Chatbot Functionality
 const WORKER_URL = "https://tyler-port-chat.tyler-harnaraine.workers.dev/";
+
 
 function appendMessage(sender, text) {
   const chatWindow = document.getElementById("chat-window");
@@ -164,15 +201,19 @@ function appendMessage(sender, text) {
   chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
+
 async function sendMessage(message) {
   if (!message.trim()) return;
   document.getElementById("chat-input").value = "";
 
+
   const chatWindow = document.getElementById("chat-window");
   if (chatWindow.querySelector("p")) chatWindow.innerHTML = "";
 
+
   appendMessage("You", message);
   appendMessage("Tyler's AI", "Thinking...");
+
 
   try {
     const res = await fetch(WORKER_URL, {
@@ -188,16 +229,19 @@ async function sendMessage(message) {
   }
 }
 
+
 $(document).ready(function () {
   $("#chat-send").on("click", function () {
     sendMessage($("#chat-input").val());
   });
 
+
   $("#chat-input").on("keypress", function (e) {
     if (e.key === "Enter") sendMessage($(this).val());
   });
 
+
   $(".suggested-q").on("click", function () {
     sendMessage($(this).text());
   });
-});
+})

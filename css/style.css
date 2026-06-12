@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+
 * {
   padding: 0;
   margin: 0;
@@ -14,6 +15,7 @@ h6 {
   
 }
 
+
 p {
   font-family: 'Poppins';
   font-size: 20px;
@@ -21,16 +23,19 @@ p {
   color: black;
 }
 
+
 .r-btn {
   padding: 5px 20px;
   background-color: purple !important;
   color: white !important;
 }
 
+
 .r-p {
   padding-top: 125px;
   padding-bottom: 125px;
 }
+
 
 .content-mg {
   margin: 10px 0;
@@ -46,7 +51,9 @@ p {
   text-align: center;
 }
 
+
 /* navbar */
+
 
 nav .navbar-brand {
   font-size: 30px;
@@ -69,6 +76,7 @@ nav.r-nav {
   transition: 0.5s all;
 }
 
+
 nav.r-nav.stickyadd {
   background: #fff !important;
   padding: 15px 0;
@@ -90,10 +98,12 @@ nav.stickyadd .hamburger {
   color: #000;
 }
 
+
 nav *,
 header * {
   animation-delay: 0.5s;
 }
+
 
 .section-separator {
   height: 10px;
@@ -101,7 +111,9 @@ header * {
   width: 100%;
 }
 
+
 /* header */
+
 
 header {
   height: 100vh;
@@ -142,18 +154,19 @@ header {
 }
 
 
-
-
 /* Projects */
+
 
 .card,
 .card-header {
   background:whitesmoke!important;
 }
 
+
 .card-header {
   border: none !important;
 }
+
 
 .services .card-header i {
   font-size: 50px;
@@ -168,14 +181,17 @@ header {
   width: 100px;
 }
 
+
 .services p {
   font-size: 16px;
 }
+
 
 .services .btn:hover {
   color: #000 !important;
   background: #eee !important;
 }
+
 
 
 /* Work */
@@ -189,6 +205,7 @@ header {
   text-align: center;
   color: #00aeff;
 }
+
 
 /* footer */
 footer {
@@ -226,6 +243,7 @@ footer .r-icon a:hover {
     color: #000 !important;
   }
 
+
   .content-box h1 {
     font-size: 30px;
   }
@@ -240,8 +258,9 @@ footer .r-icon a:hover {
   }
 }
 
+
 /* 
-Cards flipping boxes and animaiton */
+Cards flipping boxes and animation */
 .img-fluid {
   max-width: 100%; 
   max-height: 400px; 
@@ -252,10 +271,12 @@ Cards flipping boxes and animaiton */
   border-radius: 30%;
 }
 
+
 .card-wrapper {
   perspective: 1000px;
   margin-bottom: 30px; 
 }
+
 
 .card-flip {
   position: relative;
@@ -263,11 +284,17 @@ Cards flipping boxes and animaiton */
   height: 350px; 
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  /* CHANGED: removed :hover flip — flip is now triggered by click via .flipped class in JS */
+  cursor: pointer;
 }
 
-.card-flip:hover {
+/* REMOVED: .card-flip:hover { transform: rotateY(180deg); } */
+
+/* CHANGED: flip is now applied via JS toggling the .flipped class on click */
+.card-flip.flipped {
   transform: rotateY(180deg);
 }
+
 
 .card-front, .card-back {
   position: absolute;
@@ -277,13 +304,11 @@ Cards flipping boxes and animaiton */
   border-radius: 30%;
 }
 
+
 .card-back {
   transform: rotateY(180deg);
 }
 
-.card-flip.flipped {
-  transform: rotateY(180deg);
-}
 
 .img-fluid {
   max-width: 100%;
@@ -293,6 +318,7 @@ Cards flipping boxes and animaiton */
   border: 10px solid black;
   border-radius: 50%;
 }
+
 
   .project-card {
     transition: transform 1s ease-in-out, box-shadow 0.5s ease-in-out;
@@ -320,6 +346,7 @@ Cards flipping boxes and animaiton */
   
 /* skills image  */
 
+
 #work {
   background-image:  url("../images/6107094.jpg");
   min-height: 100vh; 
@@ -329,18 +356,20 @@ Cards flipping boxes and animaiton */
 }
 
 
+
 @media (max-width: 768px) {
   #work {
-    background-image: url("../images/vertical\ image.jpeg"); 
+    background-image: url("../images/vertical image.jpeg"); 
     background-attachment: scroll; 
   }
 }
 
 
+
   /* Projects Section */
   .bg-sec {
     background-image: 
-    url("../images/Reversed\ Timeline\ Image.png"); 
+    url("../images/Reversed Timeline Image.png"); 
     background-size: cover; 
   }
  
@@ -356,13 +385,16 @@ Cards flipping boxes and animaiton */
   }
   
 
+
 /* About Section Cards */
   .custom-card-color {
     background-color: whitesmoke;
   }
   
 
+
 /* TimeLine Code Source: */
+
 
  :root{
     --color1: #4e237c;
@@ -370,9 +402,10 @@ Cards flipping boxes and animaiton */
 } 
 
 
+
 .timeline-section {
   background-image:  
-  url("../images/Reversed\ Timeline\ Image.png");
+  url("../images/Reversed Timeline Image.png");
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -380,15 +413,16 @@ Cards flipping boxes and animaiton */
   padding-top: 100px;
   padding-bottom: 50px;
 
+
 }
-
-
 
 
 .main-timeline {
   font-family: 'Poppins', sans-serif;
 
+
 }
+
 
 .main-timeline:after{
     content: '';
@@ -489,13 +523,16 @@ Cards flipping boxes and animaiton */
   --color2: #6a2e88;
 }
 
+
 .main-timeline .timeline:nth-child(4){
   --color1: #14187e;
   --color2: #3f43c4;
 }
 
+
 /* 
 Phone timeline display */
+
 
 @media screen and (max-width:767px){
     .main-timeline .timeline,
@@ -532,20 +569,30 @@ Phone timeline display */
     }
 }
 
+
 #toggle-tts {
   cursor: pointer;
 }
+
 
 #toggle-tts i {
   color: none; 
 }
 
+
 #toggle-tts:hover i {
   color: #555; 
 }
+
 
 .description {
   text-align: left;
   list-style-position: inside;
 }
 
+/* ADDED: focus-visible outline for keyboard accessibility on cert cards */
+.card-flip:focus-visible {
+  outline: 3px solid #00aeff;
+  outline-offset: 4px;
+  border-radius: 50%;
+}
