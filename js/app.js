@@ -151,8 +151,7 @@ document.addEventListener('dblclick', () => {
   }
 });
 
-
-// ========== Chatbot ==========
+// Chatbot Functionality
 const WORKER_URL = "https://tyler-port-chat.tyler-harnaraine.workers.dev/";
 
 function appendMessage(sender, text) {
@@ -202,4 +201,3 @@ $(document).ready(function () {
     sendMessage($(this).text());
   });
 });
-// ========== End Chatbot ==========
