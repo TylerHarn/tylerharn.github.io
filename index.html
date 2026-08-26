@@ -116,37 +116,60 @@
     </div>
 
 
-    <!-- Bottom row: Chatbot card matching About Me style -->
-    <div class="row">
-      <div class="col way-fade-up">
-        <div class="card w-100" style="background: rgba(255,255,255,0.92); border: none; border-radius: 12px;">
-          <div class="card-body" style="padding: 1.5rem;">
+<!-- Bottom row: Chatbot card matching About Me style -->
+<div class="row">
+  <div class="col way-fade-up">
+    <div class="card w-100" style="background: rgba(255,255,255,0.92); border: none; border-radius: 12px;">
+      <div class="card-body" style="padding: 1.5rem;">
 
+        <div class="d-flex align-items-center mb-3">
+          <div style="width: 10px; height: 10px; background: #00aeff; border-radius: 50%; margin-right: 8px; box-shadow: 0 0 6px #00aeff;"></div>
+          <span style="color: #000000; font-weight: 600; font-size: 1.5rem; font-family: 'Poppins', sans-serif;">Want to Learn More? Ask My AI</span>
+        </div>
 
-            <div class="d-flex align-items-center mb-3">
-              <div style="width: 10px; height: 10px; background: #00aeff; border-radius: 50%; margin-right: 8px; box-shadow: 0 0 6px #00aeff;"></div>
-              <span style="color: #000000; font-weight: 600; font-size: 1.5rem; font-family: 'Poppins', sans-serif;"> Want to Learn more? Ask My AI (TulerAI)</span>
-            </div>
+        <!-- Status banner -->
+        <div style="
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: #fff4e5;
+          border: 1px solid #ffb84d;
+          border-radius: 8px;
+          padding: 10px 14px;
+          margin-bottom: 12px;
+          font-family: 'Poppins', sans-serif;
+        ">
+          <span style="font-size: 1.1rem;">⚠️</span>
+          <span style="font-size: 0.85rem; color: #7a4a00; font-weight: 500;">
+            This assistant's model has been retired as of 8/25/2026. I'm currently sourcing a replacement - check back soon!
+          </span>
+        </div>
 
+        <!-- Chat window -->
+        <div id="chat-window" style="
+          background: rgba(193, 222, 250, 0.918);
+          border-radius: 8px;
+          height: 140px;
+          overflow-y: auto;
+          padding: 14px;
+          margin-bottom: 12px;
+          text-align: left;
+          font-family: 'Poppins', sans-serif;
+          font-size: 1rem;
+          color: #000;
+        ">
+          <div style="margin-bottom: 8px;">
+            <strong style="color: #00aeff;">TylerAI:</strong>
+            <span style="color: rgba(0, 0, 0, 0.7); font-style: italic;">
+              I'm temporarily offline while my model gets upgraded. Thanks for your patience!
+            </span>
+          </div>
+        </div>
 
-            <!-- Chat window -->
-            <div id="chat-window" style="
-              background: rgba(193, 222, 250, 0.918);
-              border-radius: 8px;
-              height: 140px;
-              overflow-y: auto;
-              padding: 14px;
-              margin-bottom: 12px;
-              text-align: left;
-              font-family: 'Poppins', sans-serif;
-              font-size: 1.5rem;
-              color: #000;
-            ">
-              <div style="font-size: 1rem; font-family: 'Poppins', sans-serif; margin-bottom: 8px;">
-                <strong style="color: #00aeff;">Tyler's AI:</strong>
-                <span style="color: rgba(0, 0, 0, 0.952);"> <strong>Hi! 👋 Ask me anything about Tyler's experience, skills, projects, or certifications.</strong></span>
-              </div>
-            </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
             <!-- Suggested questions + input on same row -->
