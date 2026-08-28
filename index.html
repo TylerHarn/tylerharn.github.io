@@ -116,69 +116,193 @@
     </div>
 
 
+```html
 <!-- Bottom row: Chatbot card matching About Me style -->
-    <div class="row">
-      <div class="col way-fade-up">
-        <div class="card w-100" style="background: rgba(255,255,255,0.92); border: none; border-radius: 12px;">
-          <div class="card-body" style="padding: 1.5rem;">
+<div class="row">
+  <div class="col way-fade-up">
+    <div class="card w-100" style="
+      background: rgba(255,255,255,0.92);
+      border: none;
+      border-radius: 12px;
+    ">
 
+      <div class="card-body" style="padding: 1.5rem;">
 
+        <!-- Chatbot title -->
+        <div class="d-flex align-items-center mb-3">
+          
+          <!-- Red status dot -->
+          <div style="
+            width: 10px;
+            height: 10px;
+            background: #ff0000;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 6px #ff0000;
+          "></div>
 
-            <div class="d-flex align-items-center mb-3">
-              <div style="width: 10px; height: 10px; background: #00aeff; border-radius: 50%; margin-right: 8px; box-shadow: 0 0 6px #00aeff;"></div>
-              <span style="color: #000000; font-weight: 600; font-size: 1.5rem; font-family: 'Poppins', sans-serif;"> Want to Learn more? Ask My AI</span>
-            </div>
+          <span style="
+            color: #000000;
+            font-weight: 600;
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+          ">
+            Want to Learn more? Ask My AI
+          </span>
 
-
-
-            <!-- Chat window -->
-            <div id="chat-window" style="
-              background: rgba(193, 222, 250, 0.918);
-              border-radius: 8px;
-              height: 140px;
-              overflow-y: auto;
-              padding: 14px;
-              margin-bottom: 12px;
-              text-align: left;
-              font-family: 'Poppins', sans-serif;
-              font-size: 1.5rem;
-              color: #000;
-            ">
-              <div style="font-size: 1rem; font-family: 'Poppins', sans-serif; margin-bottom: 8px;">
-                <strong style="color: #00aeff;">Tyler's AI:</strong>
-                <span style="color: rgba(0, 0, 0, 0.952);"> <strong> Hi There! Ask me anything about Tyler</strong></span>
-              </div>
-            </div>
-
-
-            <!-- Suggested questions + input on same row -->
-            <div class="d-flex flex-wrap align-items-center" style="gap: 8px;">
-              <button class="suggested-q" style="background: rgb(0,0,0); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: pointer;">Top skills?</button>
-              <button class="suggested-q" style="background: rgb(0,0,0); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: pointer;">Projects?</button>
-              <button class="suggested-q" style="background: rgb(0,0,0); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: pointer;">Certifications?</button>
-
-
-              <!-- Input inline -->
-              <div class="input-group flex-grow-1" style="min-width: 250px;">
-                <input type="text" id="chat-input" class="form-control"
-                  placeholder="Type your question..."
-                  style="background: #fff; border: 2px solid #00aeff; color: #030303; border-radius: 8px 0 0 8px; outline: none; box-shadow: none; font-family: 'Poppins', sans-serif; font-size: 1rem;">
-                <div class="input-group-append">
-                  <button class="btn" id="chat-send"
-                    style="background: #00aeff; color: #fff; border-radius: 0 8px 8px 0; font-weight: 600; font-family: 'Poppins', sans-serif; font-size: 1rem;">Send</button>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
         </div>
+
+        <!-- Currently Down Banner -->
+        <div style="
+          background: #fff3cd;
+          border: 1px solid #ffc107;
+          color: #856404;
+          border-radius: 8px;
+          padding: 8px 12px;
+          margin-bottom: 12px;
+          text-align: center;
+          font-family: 'Poppins', sans-serif;
+          font-size: 0.9rem;
+        ">
+          <strong>⚠ AI Chatbot is currently down.</strong>
+          Please check back later.
+        </div>
+
+
+        <!-- Chat window -->
+        <div id="chat-window" style="
+          background: rgba(193, 222, 250, 0.918);
+          border-radius: 8px;
+          height: 140px;
+          overflow-y: auto;
+          padding: 14px;
+          margin-bottom: 12px;
+          text-align: left;
+          font-family: 'Poppins', sans-serif;
+          font-size: 1.5rem;
+          color: #000;
+        ">
+
+          <div style="
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 8px;
+          ">
+            <strong style="color: #ff0000;">
+              Tyler's AI:
+            </strong>
+
+            <span style="color: rgba(0, 0, 0, 0.952);">
+              <strong>
+                Hi There! Ask me anything about Tyler
+              </strong>
+            </span>
+          </div>
+
+        </div>
+
+
+        <!-- Suggested questions + input on same row -->
+        <div class="d-flex flex-wrap align-items-center" style="gap: 8px;">
+
+          <!-- Suggested Questions -->
+          <button
+            class="suggested-q"
+            style="
+              background: rgb(0,0,0);
+              border: 1px solid rgba(255,255,255,0.25);
+              color: #fff;
+              border-radius: 20px;
+              padding: 4px 12px;
+              font-size: 0.9rem;
+              font-family: 'Poppins', sans-serif;
+              cursor: pointer;
+            "
+          >
+            Top skills?
+          </button>
+
+          <button
+            class="suggested-q"
+            style="
+              background: rgb(0,0,0);
+              border: 1px solid rgba(255,255,255,0.25);
+              color: #fff;
+              border-radius: 20px;
+              padding: 4px 12px;
+              font-size: 0.9rem;
+              font-family: 'Poppins', sans-serif;
+              cursor: pointer;
+            "
+          >
+            Projects?
+          </button>
+
+          <button
+            class="suggested-q"
+            style="
+              background: rgb(0,0,0);
+              border: 1px solid rgba(255,255,255,0.25);
+              color: #fff;
+              border-radius: 20px;
+              padding: 4px 12px;
+              font-size: 0.9rem;
+              font-family: 'Poppins', sans-serif;
+              cursor: pointer;
+            "
+          >
+            Certifications?
+          </button>
+
+
+          <!-- Input -->
+          <div class="input-group flex-grow-1" style="min-width: 250px;">
+
+            <input
+              type="text"
+              id="chat-input"
+              class="form-control"
+              placeholder="Type your question..."
+              style="
+                background: #fff;
+                border: 2px solid #00aeff;
+                color: #030303;
+                border-radius: 8px 0 0 8px;
+                outline: none;
+                box-shadow: none;
+                font-family: 'Poppins', sans-serif;
+                font-size: 1rem;
+              "
+            >
+
+            <div class="input-group-append">
+
+              <button
+                class="btn"
+                id="chat-send"
+                style="
+                  background: #00aeff;
+                  color: #fff;
+                  border-radius: 0 8px 8px 0;
+                  font-weight: 600;
+                  font-family: 'Poppins', sans-serif;
+                  font-size: 1rem;
+                "
+              >
+                Send
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
-
-
   </div>
-</section>
+</div>
+```
+
 
 
 
