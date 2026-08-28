@@ -203,14 +203,17 @@ function appendMessage(sender, text) {
 
 
 async function sendMessage(message) {
-  if (!message || !message.trim()) return;
+  if (!message.trim()) return;
   document.getElementById("chat-input").value = "";
+
 
   const chatWindow = document.getElementById("chat-window");
   if (chatWindow.querySelector("p")) chatWindow.innerHTML = "";
 
+
   appendMessage("You", message);
   appendMessage("Tyler's AI", "Thinking...");
+
 
   try {
     const res = await fetch(WORKER_URL, {
@@ -218,17 +221,10 @@ async function sendMessage(message) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userMessage: message }),
     });
-
     const data = await res.json();
-
-    if (!res.ok || !data.reply) {
-      throw new Error(data.error || "Failed to receive reply");
-    }
-
     chatWindow.lastChild.innerHTML = `<strong style="color: #333">Tyler's AI:</strong> <span style="color: #444">${data.reply}</span>`;
     chatWindow.lastChild.style.fontSize = "0.85rem";
   } catch (err) {
-    console.error("Chat error:", err);
     chatWindow.lastChild.innerHTML = `<strong style="color: red">Error:</strong> <span style="color: #444">Something went wrong. Please try again.</span>`;
   }
 }
