@@ -2,7 +2,6 @@
 <html lang="en">
 
 
-
 <head>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2VSFFWT8BD"></script>
@@ -12,10 +11,8 @@
   gtag('js', new Date());
 
 
-
   gtag('config', 'G-2VSFFWT8BD');
 </script>
-
 
 
   <meta charset="UTF-8">
@@ -35,7 +32,6 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Nunito:400,700" rel="stylesheet">
   <link rel="stylesheet" href="lib/animate.css">
 </head>
-
 
 
 
@@ -94,15 +90,12 @@
 
 
 
-
 <div class="section-separator"></div>
-
 
 
 <!-- About me -->
 <section class="about r-p custom-bg-color" id="about" style="background-image: url('images/Reversed Timeline Image.png'); background-size: cover; background-position: center;">
   <div class="container">
-
 
 
     <!-- Top row: About Me card full width -->
@@ -123,7 +116,6 @@
     </div>
 
 
-
 <!-- Bottom row: Chatbot card matching About Me style -->
     <div class="row">
       <div class="col way-fade-up">
@@ -132,29 +124,9 @@
 
 
 
-
             <div class="d-flex align-items-center mb-3">
-              <div style="width: 10px; height: 10px; background: #e63946; border-radius: 50%; margin-right: 8px; box-shadow: 0 0 6px #e63946;"></div>
+              <div style="width: 10px; height: 10px; background: #00aeff; border-radius: 50%; margin-right: 8px; box-shadow: 0 0 6px #00aeff;"></div>
               <span style="color: #000000; font-weight: 600; font-size: 1.5rem; font-family: 'Poppins', sans-serif;"> Want to Learn more? Ask My AI</span>
-            </div>
-
-
-
-
-            <!-- Status note: model currently down -->
-            <div id="chat-status-note" style="
-              background: #fff3cd;
-              border: 1px solid #ffe69c;
-              color: #664d03;
-              border-radius: 8px;
-              padding: 8px 14px;
-              margin-bottom: 12px;
-              font-family: 'Poppins', sans-serif;
-              font-size: 0.9rem;
-              text-align: center;
-            ">
-              <i class="fas fa-exclamation-triangle" style="margin-right: 6px;"></i>
-              The AI chatbot is temporarily unavailable while the model is down. Please check back soon, or reach out via the <a href="#contact" style="color: #664d03; text-decoration: underline;">Contact</a> section below.
             </div>
 
 
@@ -174,33 +146,496 @@
             ">
               <div style="font-size: 1rem; font-family: 'Poppins', sans-serif; margin-bottom: 8px;">
                 <strong style="color: #00aeff;">Tyler's AI:</strong>
-                <span style="color: rgba(0, 0, 0, 0.952);"> <strong>Hi There! My AI model is currently down for maintenance — I'll be back online soon. In the meantime, feel free to browse the site or contact me directly.</strong></span>
+                <span style="color: rgba(0, 0, 0, 0.952);"> <strong> Hi There! Ask me anything about Tyler</strong></span>
               </div>
             </div>
 
 
-
             <!-- Suggested questions + input on same row -->
             <div class="d-flex flex-wrap align-items-center" style="gap: 8px;">
-              <button class="suggested-q" disabled style="background: rgb(120,120,120); border: 1px solid rgba(255,255,255,0.25); color: #ddd; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: not-allowed;">Top skills?</button>
-              <button class="suggested-q" disabled style="background: rgb(120,120,120); border: 1px solid rgba(255,255,255,0.25); color: #ddd; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: not-allowed;">Projects?</button>
-              <button class="suggested-q" disabled style="background: rgb(120,120,120); border: 1px solid rgba(255,255,255,0.25); color: #ddd; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: not-allowed;">Certifications?</button>
-
+              <button class="suggested-q" style="background: rgb(0,0,0); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: pointer;">Top skills?</button>
+              <button class="suggested-q" style="background: rgb(0,0,0); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: pointer;">Projects?</button>
+              <button class="suggested-q" style="background: rgb(0,0,0); border: 1px solid rgba(255,255,255,0.25); color: #fff; border-radius: 20px; padding: 4px 12px; font-size: 0.9rem; font-family: 'Poppins', sans-serif; cursor: pointer;">Certifications?</button>
 
 
               <!-- Input inline -->
               <div class="input-group flex-grow-1" style="min-width: 250px;">
-                <input type="text" id="chat-input" class="form-control" disabled
-                  placeholder="Chatbot temporarily offline..."
-                  style="background: #eee; border: 2px solid #999; color: #666; border-radius: 8px 0 0 8px; outline: none; box-shadow: none; font-family: 'Poppins', sans-serif; font-size: 1rem;">
+                <input type="text" id="chat-input" class="form-control"
+                  placeholder="Type your question..."
+                  style="background: #fff; border: 2px solid #00aeff; color: #030303; border-radius: 8px 0 0 8px; outline: none; box-shadow: none; font-family: 'Poppins', sans-serif; font-size: 1rem;">
                 <div class="input-group-append">
-                  <button class="btn" id="chat-send" disabled
-                    style="background: #999; color: #fff; border-radius: 0 8px 8px 0; font-weight: 600; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: not-allowed;">Send</button>
+                  <button class="btn" id="chat-send"
+                    style="background: #00aeff; color: #fff; border-radius: 0 8px 8px 0; font-weight: 600; font-family: 'Poppins', sans-serif; font-size: 1rem;">Send</button>
                 </div>
               </div>
             </div>
 
 
-
           </div>
         </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+<div class="section-separator"></div>
+
+
+
+  <section id="timeline" class="timeline-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-white text-center">Experience Timeline</h2>
+        <br><br>
+        <div class="main-timeline">
+
+
+
+          <div class="timeline">
+            <div class="timeline-content">
+              <div class="timeline-year">2017 <br> <h5>Jan - Dec</h5></div>
+              <h3 class="title">Custom PC Builder</h3>
+              <p class="description">
+                <strong>Independent Contractor</strong>
+                <br>
+                • Built 10+ custom gaming PCs tailored to client specifications.<br>
+                • Troubleshot hardware and software issues regarding PCs, Monitors, and Networking.<br>
+                • Provided consultation on hardware upgrades and system optimization.
+              </p>
+            </div>
+          </div>
+
+
+
+          <div class="timeline">
+            <div class="timeline-content">
+              <div class="timeline-year">2022 <br> <h5>Aug - Sept</h5></div>
+              <h3 class="title">IT Coordinator</h3>
+              <p class="description">
+                <strong>Reconciliation In Business</strong>
+                <br>
+                • Led IT team in executing pre-event IT preparations.<br>
+                • Operated audiovisual hardware and software, ensuring seamless execution.<br>
+                • Utilized IT expertise to create an engaging list of questions, exploring the impact of technology in Indigenous communities.
+              </p>
+            </div>
+          </div>
+
+
+
+          <div class="timeline">
+            <div class="timeline-content">
+              <div class="timeline-year">2023 <br> <h5>May - Dec</h5></div>
+              <h3 class="title">IT Experience Consultant</h3>
+              <p class="description">
+                <strong>Tridel</strong>
+                <br>
+                • Collaborated with external departments and 3rd party vendors to complete 10+ projects aimed at
+                improving the IT experience for internal employees.<br>
+                • Provided helpdesk support to 500+ employees both on-premises and on-site, efficiently resolving 275+
+                user tickets.<br>
+              </p>
+            </div>
+          </div>
+
+
+
+          <div class="timeline">
+            <div class="timeline-content">
+              <div class="timeline-year">2024 <br> <h5>May - Aug</h5></div>
+              <h3 class="title">System Engineer</h3>
+              <p class="description">
+                <strong>FSRA</strong>
+                <br>
+                • Played a key role in the organization-wide Windows 11 migration and the transition from SCCM to Intune, assisting with device enrollment, Wi-Fi certificates, and application packaging.<br>
+                • Troubleshot and resolved tier 2 escalated issues, addressing challenges related to FortiClient VPN, Intune endpoint compliance, audio-visual, and cybersecurity threats.<br>
+              </p>
+            </div>
+          </div>
+
+
+
+          <div class="timeline">
+            <div class="timeline-content">
+              <div class="timeline-year">2025 <br> <h5>Jan - Aug</h5></div>
+              <h3 class="title">Systems Administrator</h3>
+              <p class="description">
+                <strong>PointClickCare</strong>
+                <br>
+                • Built Power BI dashboards and Power Automate flows integrating multiple APIs to improve offboarding compliance and ticket response, reducing costs.<br>
+                • Audited cloud apps with Microsoft Defender for Cloud Apps, removing high-risk apps and lowering security exposure.
+              </p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  
+
+
+
+<div class="section-separator"></div>
+  
+
+
+
+ <!-- Projects -->
+ <section class="services bg-sec r-p" id="services">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col mb-5 way-fade-right">
+        <div class="col">
+          <h2 class="text-white">Personal Projects</h2>
+        </div>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="row text-center way-fade-up">
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fab fa-windows"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vmware ESXi / AD DS Implementation</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Implemented VMware ESXi to create a virtual server environment, configuring a domain on Windows Server 2019. Successfully joined additional virtual machines to the domain and managed them through GPOs, demonstrating proficiency client managment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fab fa-linux"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Linux Home Server</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Set up a home server with Ubuntu, adding a secure network drive and OpenVPN for safe remote access. Used Firewall (UFW) and SSH keys to keep data safe, showing skills in keeping servers secure and easy to use.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">IDS Configuration (Snort)</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Configured Snort as an intrusion detection system (IDS) to monitor network traffic for malicious activities.This project involved setting up Snort rules, defining network segments to monitor, and analyzing alerts to detect and respond to potential threats effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">VLAN Configuration</h5>
+            <div class="service-border"></div>
+            <p class="card-text"> Set up and configured VLANs in my home lab using a TP-LINK managed switch, focusing on segregating network traffic, enabling inter-VLAN routing, and enhancing security with access control lists (ACLs). This project showcased my skills in designing and managing a secure, efficient network infrastructure.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Azure VNet Management</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Implemented Virtual Networks in Azure lab environment, involving VNet creation, subnetting, and network secuirty groups (NSGs) for access control, showcasing my ability to manage and created secure, scalable, cloud networks in Microsoft Azure. 
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vulnerability Exploitation
+            </h5>
+            <div class="service-border"></div>
+            <p class="card-text">Explored vulnerabilities on Metasploitable, including FTP anonymous access, weak SSH credentials, misconfigured Samba shares, and unpatched web apps. Used exploits to gain unauthorized access and demonstrate security impact, enhancing my skills in identifying security weaknesses.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="section-separator"></div>  
+
+
+
+
+<!--  Certifications -->
+<section class="work r-p" id="work">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col mb-5 way-fade-left">
+        <h2 class="text-white">My Certifications</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 mx-auto mb-5 way-fade-left">
+        <button class="btn r-btn" data-filter="all">All</button>
+        <button class="btn r-btn" data-filter="1">Cybersecurity</button>
+        <button class="btn r-btn" data-filter="2">IT Administration</button>
+        <button class="btn r-btn" data-filter="3">Programming</button>
+      </div>
+    </div>
+    <!-- Click-to-flip hint -->
+    <div class="row mb-3">
+      <div class="col">
+        <p class="cert-hint" style="color: rgba(255,255,255,0.75); font-size: 0.9rem; font-family: 'Poppins', sans-serif;">
+          <i class="fas fa-hand-pointer" style="margin-right: 6px;"></i>Click a Card To Learn More!
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row filter-container mx-auto img-loaded">
+        <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="1">
+          <div class="card-flip" role="button" tabindex="0" aria-label="ISC2 CC certification - click to flip">
+            <div class="card-front">
+              <img src="images/ISC2 Badge.png" class="img-fluid" alt="Image of ISC logo with the title CC">
+            </div>
+            <div class="card-back">
+              <img src="images/ISC2 Contents.png" class="img-fluid" alt="Summary - Access Control Concepts • Business Continuity & Disaster Recovery Concepts, Network Security , Security Operations, Incident Response Concepts, Risk Management">
+            </div>
+          </div>
+        </div>
+
+
+         <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="2">
+          <div class="card-flip" role="button" tabindex="0" aria-label="Azure AZ-900 certification - click to flip">
+            <div class="card-front">
+              <img src="images/az900 image.png" class="img-fluid" alt="Image of ISC logo with the title CC">
+            </div>
+            <div class="card-back">
+              <img src="images/Azure Info.png" class="img-fluid" alt="Summary - Access Control Concepts • Business Continuity & Disaster Recovery Concepts, Network Security , Security Operations, Incident Response Concepts, Risk Management">
+            </div>
+          </div>
+        </div>
+
+
+
+       
+        <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="2">
+          <div class="card-flip" role="button" tabindex="0" aria-label="Cisco Networking Basics certification - click to flip">
+            <div class="card-front">
+              <img src="images/Cisco Badge(1).png" class="img-fluid" alt="Image of Cisco Logo with title Networking Basics">
+            </div>
+            <div class="card-back">
+              <img src="images/Cisco Contents.png" class="img-fluid" alt="Summmary - IPv4 & IPv6 Addressing DHCP, DNS, ARP, TCP, UDP OSI & TCP/IP Models Network Types (SOHO, LAN, WAN, MAN) Network Media Routing">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="3">
+          <div class="card-flip" role="button" tabindex="0" aria-label="Python certification - click to flip">
+            <div class="card-front">
+              <img src="images/Python badge.png" class="img-fluid" alt="Teds Rogers School of Management Logo with the title Python 2.0">
+            </div>
+            <div class="card-back">
+              <img src="images/Python Contetn.png" class="img-fluid" alt="Syntax, Data Types, Control Structures, & Data Collections Data Visualization: Pandas, Matplotlib, and Seaborn Data Analytics: Pivot tables, Data Aggregation, and merging data sources">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="3">
+          <div class="card-flip" role="button" tabindex="0" aria-label="SQL certification - click to flip">
+            <div class="card-front">
+              <img src="images/SQL badge.png" class="img-fluid" alt="Teds Rogers School of Management Logo with the title SQL 2.0">
+            </div>
+            <div class="card-back">
+              <img src="images/SQL content.png" class="img-fluid" alt="Syntax, Data Types, Conditional Operators, SQL Querying: Utilized, queries to perform data manipulations and calculations enhancing proficiency in data analysis">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="">
+          <div class="card-flip" role="button" tabindex="0" aria-label="Excel certification - click to flip">
+            <div class="card-front">
+              <img src="images/Excel Badge.png" class="img-fluid" alt="Teds Rogers School of Management Logo with the title Excel Badge 2.0">
+            </div>
+            <div class="card-back">
+              <img src="images/Excel Content.png" class="img-fluid" alt="Math and Trig Formulas, Text Formulas, Date & Time Formulas, Lookup Formulas, VLOOKUP & XLOOKUP, PowerPivot, PowerQuery, PivotTables">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="3">
+          <div class="card-flip" role="button" tabindex="0" aria-label="HackerRank SQL certification - click to flip">
+            <div class="card-front">
+              <img src="images/HR Badge.png" class="img-fluid" alt="Image of HackRank logow with the title SQL">
+            </div>
+            <div class="card-back">
+              <img src="images/HR content.png" class="img-fluid" alt="SQL Syntax and Commands, Table Joining, INSERT, UPDATE, DELETE, Data filtering and Sorting, Database Normalization, Aggregate Functions (SUM, AVG, COUNT)">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="2">
+          <div class="card-flip" role="button" tabindex="0" aria-label="Linux Scripting certification - click to flip">
+            <div class="card-front">
+              <img src="images/Linux Badge.png" class="img-fluid" alt="Image of linkedin logo with the title Linux Scripting ">
+            </div>
+            <div class="card-back">
+              <img src="images/Linux Contents.png" class="img-fluid" alt="Linux Basics: File System, User Management, Package Management, Shell Scripting: Writing & Executing Scripts, CL Utilities: Navigation and Task Execution, Security Measures: Permissions Management">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-xs-6 col-sm-4 col-md-4 filtr-item card-wrapper" data-category="2">
+          <div class="card-flip" role="button" tabindex="0" aria-label="Windows Server GPOs certification - click to flip">
+            <div class="card-front">
+              <img src="images/Windows Server GPOs.png" class="img-fluid" alt="Image of linkedin logo with the title Windows Server: GP's">
+            </div>
+            <div class="card-back">
+              <img src="images/Server Content.png" class="img-fluid" alt="Configuration & Management of GPOs in Windows Server 2019, User and Computer Management using GPs, Troubleshooting via Application and Inheritance Interfaces">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="section-separator"></div>
+
+
+
+<!-- formspree working form -->
+
+
+
+<section class="contact r-p bg-sec2" id="contact" style="background-image: url('images/Gradient 2.webp'); background-size: cover; background-position: center;">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col way-fade-left">
+        <h2 style="color: whitesmoke;">Contact Me</h2>
+        <p style="color: whitesmoke;">Have Questions or Want to Connect? <br>
+          Feel Free To Leave a Message Below</p>
+      </div>
+    </div>
+    <div class="row mt-5 way-fade-left">
+      <div class="col-md-4">
+        <a href="tel:4158252948" aria-label="Mobile contact">
+          <div class="r-icon"> <i class="fas fa-mobile-alt"></i></div>
+        </a>
+        <div class="text-center">
+        </div>
+      </div>
+
+
+
+      <div class="col-md-4">
+        <a href="mailto:tyler.harnaraine@torontomu.ca" aria-label="Send email to Tyler Harnaraine">
+          <div class="r-icon"> <i class="far fa-envelope"></i></div>
+        </a>        
+        <div class="text-center">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.linkedin.com/in/tylerharnaraine/" aria-label="Visit Tyler Harnaraine's LinkedIn profile">
+          <div class="r-icon"> <i class="fab fa-linkedin"></i></div>
+        </a>        
+        <div class="text-center">
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <form action="https://formspree.io/f/xpzvygrw" method="POST">
+          <div class="form-row way-fade-left">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" placeholder="Name" name="name">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="email" class="form-control" placeholder="Email" name="email">
+            </div>
+          </div>
+          <div class="form-group way-fade-left">
+            <input type="text" class="form-control" placeholder="Subject" name="subject">
+          </div>
+          <div class="form-group way-fade-left">
+            <input type="text" class="form-control" placeholder="Organization/Company" name="Organization/Company">
+          </div>
+          <div class="form-group way-fade-left">
+            <textarea class="form-control" rows="7" placeholder="Your Message" name="message" style="resize:none;"></textarea>
+          </div>
+          <button type="submit" class="btn r-btn float-right way-fade-left">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- footer -->
+  <footer>
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="row">
+        <div class="col">
+          <div class="r-icon text-center mt-3">
+            <ul>
+              <li class="list-inline-item animated slideInUp"><a href="https://www.linkedin.com/in/tylerharnaraine"><i class="fab fa-linkedin"></i></a></li>
+              <li class="list-inline-item animated slideInUp"><a href="tel:4168252948"><i class="fas fa-mobile-alt"></i></a></li>
+              <li class="list-inline-item animated slideInUp"><a href="mailto:tyler.harnaraine@torontomu.ca"><i class="far fa-envelope"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src="lib/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/jquery.smooth-scroll.js"></script>
+  <script src="lib/imagesloaded.pkgd.min.js"></script>
+  <script src="lib/owl.carousel.min.js"></script>
+  <script src="lib/typed.js"></script>
+  <script src="lib/jquery.waypoints.min.js"></script>
+  <script src="lib/jquery.filterizr.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
