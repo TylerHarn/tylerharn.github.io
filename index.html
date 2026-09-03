@@ -23,6 +23,9 @@
   <meta name="keywords" content="Tyler Harnaraine, System Admin, Cybersecurity, IT Management, Security Specialist, Portfolio, Technology, Networking, Linux, Windows Server">
   <title>Tyler Harnaraine - Personal Portfolio</title>
   <link rel="canonical" href="https://tylerharn.github.io/">
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem('site-theme') || 'dark';
+  </script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/owl.carousel.min.css">
@@ -63,9 +66,9 @@
            <a class="nav-link" href="https://github.com/TylerHarn" target="_blank" rel="noopener noreferrer">Github</a>
         </li>
         <li class="nav-item animated fadeInRight">
-          <a class="nav-link" id="toggle-tts">
-            <img src="images/icons8-web-accessibility-30.png" alt="Toggle Text-to-Speech" style="width: 30px; height: 30px;">
-          </a>
+          <button class="nav-link theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light mode">
+            <i class="fas fa-sun"></i>
+          </button>
         </li>
       </ul>
     </div>
@@ -78,9 +81,9 @@
           <div class="col">
               <div class="content-box text-center animated fadeInUp">
                   <h4>Welcome</h4>
-                  <h1>I'm <span class="element" style="color:#00aeff;;font-weight:bold;"></span></h1>
+                  <h1>I'm <span class="element" style="color:var(--accent-text);font-weight:bold;"></span></h1>
                   <p>BTM Graduate at TMU</p>
-                  <img src="images/pingu-pfp.jpg" alt="Pingu profile picture" class="img-fluid">
+                  <img src="images/pingu-pfp.jpg" alt="Pingu profile picture" class="img-fluid hero-pfp">
                   <a href="#about" class="btn" style="background-color: white; color: black; border: 2px solid black;"> <strong>About Me</strong></a>
                 </div>
           </div>
@@ -263,7 +266,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="text-white text-center">Experience</h2>
+        <h2 class="section-title text-center">Experience</h2>
         <br>
         <div class="main-timeline">
 
@@ -341,7 +344,7 @@
     <div class="row">
       <div class="col mb-5 way-fade-right">
         <div class="col">
-          <h2 class="text-white">Personal Projects</h2>
+          <h2 class="section-title">Personal Projects</h2>
         </div>
       </div>
     </div>
@@ -465,7 +468,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col mb-5 way-fade-left">
-        <h2 class="text-white">My Certifications</h2>
+        <h2 class="section-title">My Certifications</h2>
       </div>
     </div>
     <div class="row">
@@ -479,7 +482,7 @@
     <!-- Click-to-flip hint -->
     <div class="row mb-3">
       <div class="col">
-        <p class="cert-hint" style="color: rgba(255,255,255,0.75); font-size: 0.9rem; font-family: 'Poppins', sans-serif;">
+        <p class="cert-hint" style="font-size: 0.9rem; font-family: 'Poppins', sans-serif;">
           <i class="fas fa-hand-pointer" style="margin-right: 6px;"></i>Click a Card To Learn More!
         </p>
       </div>
@@ -618,8 +621,8 @@
   <div class="container text-center">
     <div class="row">
       <div class="col way-fade-left">
-        <h2 style="color: whitesmoke;">Contact Me</h2>
-        <p style="color: whitesmoke;">Have Questions or Want to Connect? <br>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Have Questions or Want to Connect? <br>
           Feel Free To Leave a Message Below</p>
       </div>
     </div>
@@ -695,72 +698,115 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.halo.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.dots.min.js"></script>
   <script>
-    if (window.VANTA) {
-      VANTA.NET({
-        el: "#home",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x00aeff,
-        backgroundColor: 0x0a0c0f,
-        points: 9.00,
-        maxDistance: 22.00,
-        spacing: 17.00,
-        showDots: true
-      });
+    // Per-section Vanta config: one effect per section, with a dark and a
+    // light color variant. `base` options (interactivity, sizing, etc.)
+    // stay identical between themes — only colors change.
+    var vantaConfigs = {
+      '#home': {
+        effect: 'NET',
+        base: { mouseControls: true, touchControls: true, gyroControls: false, minHeight: 200.00, minWidth: 200.00, scale: 1.00, scaleMobile: 1.00, points: 9.00, maxDistance: 22.00, spacing: 17.00, showDots: true },
+        dark: { color: 0x00aeff, backgroundColor: 0x0a0c0f },
+        light: { color: 0x0d3d5c, backgroundColor: 0xf4f6f8 }
+      },
+      '#about': {
+        effect: 'DOTS',
+        base: { mouseControls: false, touchControls: false, gyroControls: false, minHeight: 200.00, minWidth: 200.00, size: 3.0, spacing: 38.0, showLines: false },
+        dark: { color: 0x2a4258, color2: 0x2a4258, backgroundColor: 0x0a0c0f },
+        light: { color: 0xaab8c4, color2: 0xaab8c4, backgroundColor: 0xf4f6f8 }
+      },
+      '#timeline': {
+        effect: 'DOTS',
+        base: { mouseControls: false, touchControls: false, gyroControls: false, minHeight: 200.00, minWidth: 200.00, size: 3.0, spacing: 38.0, showLines: false },
+        dark: { color: 0x2a4258, color2: 0x2a4258, backgroundColor: 0x0d1013 },
+        light: { color: 0xaab8c4, color2: 0xaab8c4, backgroundColor: 0xeef1f4 }
+      },
+      '#services': {
+        effect: 'HALO',
+        base: { mouseControls: false, touchControls: false, gyroControls: false, minHeight: 200.00, minWidth: 200.00, amplitudeFactor: 0.7, size: 0.7 },
+        dark: { baseColor: 0x00aeff, backgroundColor: 0x0d1013 },
+        light: { baseColor: 0x0077ab, backgroundColor: 0xeef1f4 }
+      },
+      '#contact': {
+        effect: 'HALO',
+        base: { mouseControls: false, touchControls: false, gyroControls: false, minHeight: 200.00, minWidth: 200.00, amplitudeFactor: 0.7, size: 0.7 },
+        dark: { baseColor: 0x00aeff, backgroundColor: 0x0a0c0f },
+        light: { baseColor: 0x0077ab, backgroundColor: 0xf4f6f8 }
+      },
+      '#work': {
+        effect: 'DOTS',
+        base: { mouseControls: false, touchControls: false, gyroControls: false, minHeight: 200.00, minWidth: 200.00, size: 3.0, spacing: 38.0, showLines: false },
+        dark: { color: 0x2a4258, color2: 0x2a4258, backgroundColor: 0x0d1013 },
+        light: { color: 0xaab8c4, color2: 0xaab8c4, backgroundColor: 0xeef1f4 }
+      }
+    };
+
+    var vantaInstances = {};
+
+    function currentTheme() {
+      return document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
     }
 
-    // Ambient (non-interactive) backgrounds for the remaining sections —
-    // lazy-initialized on scroll-into-view so we're not running 4 extra
-    // WebGL contexts on page load.
-    if (window.VANTA && 'IntersectionObserver' in window) {
-      var ambientTargets = [
-        { el: '#about', effect: 'DOTS', options: {
-            color: 0x2a4258, color2: 0x2a4258, backgroundColor: 0x0a0c0f,
-            size: 3.0, spacing: 38.0, showLines: false
-          } },
-        { el: '#timeline', effect: 'DOTS', options: {
-            color: 0x2a4258, color2: 0x2a4258, backgroundColor: 0x0d1013,
-            size: 3.0, spacing: 38.0, showLines: false
-          } },
-        { el: '#services', effect: 'HALO', options: {
-            baseColor: 0x00aeff, backgroundColor: 0x0d1013, amplitudeFactor: 0.7, size: 0.7
-          } },
-        { el: '#contact', effect: 'HALO', options: {
-            baseColor: 0x00aeff, backgroundColor: 0x0a0c0f, amplitudeFactor: 0.7, size: 0.7
-          } },
-        { el: '#work', effect: 'DOTS', options: {
-            color: 0x2a4258, color2: 0x2a4258, backgroundColor: 0x0d1013,
-            size: 3.0, spacing: 38.0, showLines: false
-          } }
-      ];
+    function createVanta(el) {
+      var cfg = vantaConfigs[el];
+      if (!cfg || !window.VANTA || !VANTA[cfg.effect]) return;
+      var options = Object.assign({ el: el }, cfg.base, cfg[currentTheme()]);
+      vantaInstances[el] = VANTA[cfg.effect](options);
+    }
+
+    function destroyAndRecreate(el) {
+      if (vantaInstances[el]) {
+        vantaInstances[el].destroy();
+        delete vantaInstances[el];
+      }
+      createVanta(el);
+    }
+
+    // Hero: eager, interactive.
+    createVanta('#home');
+
+    // Everything else: lazy-initialized on scroll-into-view so we're not
+    // running 5 extra WebGL contexts on page load.
+    if ('IntersectionObserver' in window) {
+      var ambientEls = ['#about', '#timeline', '#services', '#contact', '#work'];
 
       var ambientObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
           ambientObserver.unobserve(entry.target);
-          var config = ambientTargets.filter(function (t) {
-            return document.querySelector(t.el) === entry.target;
+          var matchedSelector = ambientEls.filter(function (sel) {
+            return document.querySelector(sel) === entry.target;
           })[0];
-          if (!config || !VANTA[config.effect]) return;
-          VANTA[config.effect](Object.assign({
-            el: config.el,
-            mouseControls: false,
-            touchControls: false,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00
-          }, config.options));
+          if (matchedSelector) createVanta(matchedSelector);
         });
       }, { rootMargin: '200px' });
 
-      ambientTargets.forEach(function (t) {
-        var node = document.querySelector(t.el);
+      ambientEls.forEach(function (sel) {
+        var node = document.querySelector(sel);
         if (node) ambientObserver.observe(node);
+      });
+    }
+
+    // Theme toggle
+    var themeToggleBtn = document.getElementById('theme-toggle');
+    var themeToggleIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+
+    function updateToggleIcon() {
+      if (!themeToggleIcon) return;
+      themeToggleIcon.className = currentTheme() === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+    }
+
+    function applyTheme(name) {
+      document.documentElement.dataset.theme = name;
+      localStorage.setItem('site-theme', name);
+      updateToggleIcon();
+      Object.keys(vantaInstances).forEach(destroyAndRecreate);
+    }
+
+    updateToggleIcon();
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', function () {
+        applyTheme(currentTheme() === 'light' ? 'dark' : 'light');
       });
     }
   </script>

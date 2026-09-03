@@ -138,55 +138,6 @@ $(document).ready(function(){
 
 
 
-// Text to speech
-const toggleTTSButton = document.getElementById('toggle-tts');
-let ttsEnabled = false;
-let currentUtterance = null;
-
-
-const speak = (text) => {
-  if (currentUtterance) {
-    speechSynthesis.cancel();
-  }
-  currentUtterance = new SpeechSynthesisUtterance(text);
-  speechSynthesis.speak(currentUtterance);
-};
-
-
-toggleTTSButton.addEventListener('click', () => {
-  ttsEnabled = !ttsEnabled;
-  toggleTTSButton.textContent = ttsEnabled ? 'Disable Text-to-Speech' : 'Enable Text-to-Speech';
-  if (!ttsEnabled && currentUtterance) {
-    speechSynthesis.cancel();
-    currentUtterance = null;
-  }
-});
-
-
-document.addEventListener('click', (event) => {
-  if (ttsEnabled) {
-    const section = event.target.closest('section');
-    if (section) {
-      const sectionTitleElement = section.querySelector('h2');
-      const sectionTitle = sectionTitleElement ? sectionTitleElement.textContent : '';
-      let sectionText = section.textContent;
-      if (sectionTitle) {
-        sectionText = sectionText.replace(sectionTitle, '').trim();
-      }
-      speak(sectionTitle + ' ' + sectionText);
-    }
-  }
-});
-
-
-document.addEventListener('dblclick', () => {
-  if (ttsEnabled && currentUtterance) {
-    speechSynthesis.cancel();
-    currentUtterance = null;
-  }
-});
-
-
 // Chatbot Functionality
 const WORKER_URL = "https://tyler-port-chat.tyler-harnaraine.workers.dev/";
 

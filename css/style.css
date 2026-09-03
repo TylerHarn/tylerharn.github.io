@@ -9,15 +9,33 @@
 
   --accent: #00aeff;
   --accent-dim: rgba(0, 174, 255, 0.35);
+  --accent-text: #00aeff; /* accent used as text — same as --accent in dark mode */
 
   --text-primary: #eef1f4;
   --text-muted: #93a0ac;
   --hairline: rgba(255, 255, 255, 0.08);
 }
 
+/* Light theme — same structure, light palette. Toggled via
+   document.documentElement.dataset.theme (see inline script in <head>
+   and the theme-toggle script near the end of <body>). */
+[data-theme="light"] {
+  --bg-deep: #f4f6f8;
+  --bg-timeline: #eef1f4;
+
+  --accent-text: #0077ab; /* darker than --accent so text stays legible on a light bg */
+
+  --text-primary: #12151a;
+  --text-muted: #57626c;
+  --hairline: rgba(10, 12, 15, 0.1);
+}
+
 * {
   padding: 0;
   margin: 0;
+}
+html, body {
+  background: var(--bg-deep);
 }
 h1,
 h2,
@@ -89,29 +107,59 @@ p {
   text-align: center;
 }
 
+.section-title {
+  color: var(--text-primary);
+}
+.section-subtitle {
+  color: var(--text-muted);
+}
+.cert-hint {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .card,
+[data-theme="light"] .project-card {
+  border: 1px solid rgba(10, 12, 15, 0.08);
+  box-shadow: 0 2px 10px rgba(10, 12, 15, 0.06);
+}
+
 
 /* navbar */
 
 
 nav .navbar-brand {
   font-size: 30px;
-  color: #fff;
-  transition: 0.5s all;
+  color: var(--text-primary);
+  transition: 0.2s all;
 }
 nav .navbar-nav li {
   margin-left: 20px;
 }
-nav .navbar-nav li a {
-  color: rgba(255, 255, 255, 0.8) !important;
+nav .navbar-nav li a,
+nav .navbar-nav li .theme-toggle {
+  color: var(--text-primary) !important;
+  opacity: 0.8;
   font-size: 16px;
   letter-spacing: 0.05em;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
 }
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+.theme-toggle:hover {
+  opacity: 1;
+}
 nav.r-nav {
   background: var(--bg-deep);
   padding: 20px 0px;
-  transition: 0.5s all;
+  border-bottom: 1px solid var(--hairline);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.2s all;
 }
 
 
@@ -119,20 +167,23 @@ nav.r-nav.stickyadd {
   background: var(--bg-deep);
   padding: 15px 0;
   box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.35);
-  transition: 0.5s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 nav.stickyadd .navbar-brand {
   font-size: 40px;
-  transition: 0.5s all;
+  transition: 0.2s all;
 }
 .navbar .hamburger {
-  color: #fff;
+  color: var(--text-primary);
 }
 
 
-nav *,
 header * {
   animation-delay: 0.5s;
+}
+nav * {
+  animation-delay: 0.05s;
+  animation-duration: 0.35s;
 }
 
 
@@ -147,25 +198,25 @@ header * {
 
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding-top: 75px;
   position: relative;
-  overflow: hidden;
   background: var(--bg-deep);
 }
 .header-content {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 1;
+  padding: 40px 0;
 }
 .content-box {
   max-width: 700px;
-  color: #fff;
+  color: var(--text-primary);
 }
 .content-box h4 {
   font-size: 30px;
@@ -181,7 +232,7 @@ header {
   padding: 5px 25px;
 }
 .content-box p {
-  color: #fff;
+  color: var(--text-primary);
 }
 .content-box a:hover {
   color: #000;
@@ -285,7 +336,7 @@ footer {
     font-size: 16px;
   }
   header {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-size: cover;
   }
@@ -345,11 +396,19 @@ Cards flipping boxes and animation */
 
 .img-fluid {
   max-width: 100%;
-  height: auto; 
+  height: auto;
   display: block;
   margin: 0 auto;
   border: 10px solid black;
   border-radius: 50%;
+}
+
+.hero-pfp {
+  width: 180px;
+  height: 180px;
+  max-height: 180px;
+  object-fit: cover;
+  border-width: 4px;
 }
 
 
@@ -498,7 +557,7 @@ Cards flipping boxes and animation */
   display: inline-block;
   font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 4px;
 }
 
@@ -524,19 +583,6 @@ Cards flipping boxes and animation */
 }
 
 
-#toggle-tts {
-  cursor: pointer;
-}
-
-
-#toggle-tts i {
-  color: none; 
-}
-
-
-#toggle-tts:hover i {
-  color: #555; 
-}
 
 
 .description {
