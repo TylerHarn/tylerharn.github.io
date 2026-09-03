@@ -72,7 +72,7 @@
   </div>
 </nav>
 <!-- new header -->
-<header id="home" style="background-image: url('images/Gradient 2.webp'); background-size: cover; background-position: center;">
+<header id="home">
   <div class="container-fluid header-content">
       <div class="row">
           <div class="col">
@@ -80,7 +80,7 @@
                   <h4>Welcome</h4>
                   <h1>I'm <span class="element" style="color:#00aeff;;font-weight:bold;"></span></h1>
                   <p>BTM Graduate at TMU</p>
-                  <img src="images/Profile-Picture.png" alt="Cartoon avatar of a student with glasses using a laptop" class="img-fluid">
+                  <img src="images/pingu-pfp.jpg" alt="Pingu profile picture" class="img-fluid">
                   <a href="#about" class="btn" style="background-color: white; color: black; border: 2px solid black;"> <strong>About Me</strong></a>
                 </div>
           </div>
@@ -94,202 +94,165 @@
 
 
 <!-- About me -->
-<section class="about r-p custom-bg-color" id="about" style="background-image: url('images/Reversed Timeline Image.png'); background-size: cover; background-position: center;">
+<section class="about r-p custom-bg-color" id="about">
   <div class="container">
 
-
-    <!-- Top row: About Me card full width -->
     <div class="row mb-4">
       <div class="col way-fade-up">
         <div class="card w-100" style="background: rgba(255,255,255,0.92); border: none; border-radius: 12px;">
           <div class="card-body" style="padding: 2rem;">
             <h2 class="card-title text-center" style="font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 600; color: #000;">About Me</h2>
-            <br>
-            <p class="card-text text-center" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #000;">Hi! I'm <strong>Tyler Harnaraine, a recent graduate of the Business Technology Management Toronto Metropolitan University</strong>, pursuing a career in Information Technology.</p>
-            <br>
-            <p class="card-text text-center" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #000;">My journey in tech began with building custom PCs and has since expanded to include roles such as <strong>IT Coordinator, IT Experience Consultant, System Engineer, and most recenlty System Administrator</strong>. These experiences have deepened my understanding of IT infrastructure, cybersecurity, and the pivotal role of technology in business.</p>
-            <br>
-            <p class="card-text text-center" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #000;">As I continue my journey, I'm eager to further develop my skills and make contributions to the world of technology.</p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #000;">Hi! I'm <strong>Tyler Harnaraine, a recent graduate of the Business Technology Management Toronto Metropolitan University</strong>, pursuing a career in Information Technology.</p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #000;">My journey in tech began with building custom PCs and has since expanded to include roles such as <strong>IT Coordinator, IT Experience Consultant, System Engineer, and most recenlty System Administrator</strong>. These experiences have deepened my understanding of IT infrastructure, cybersecurity, and the pivotal role of technology in business.</p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #000;">As I continue my journey, I'm eager to further develop my skills and make contributions to the world of technology.</p>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Chatbot -->
+    <div class="row">
+      <div class="col way-fade-up">
+        <div class="card w-100" style="background: rgba(255,255,255,0.92); border: none; border-radius: 12px;">
+          <div class="card-body" style="padding: 1.5rem;">
 
-```html
-<!-- Bottom row: Chatbot -->
-<div class="row">
-  <div class="col way-fade-up">
-    <div class="card w-100" style="
-      background: rgba(255,255,255,0.92);
-      border: none;
-      border-radius: 12px;
-    ">
+            <div class="d-flex align-items-center mb-3">
+              <span class="chat-status-dot"></span>
+              <span style="color: #000; font-weight: 600; font-size: 1.5rem; font-family: 'Poppins', sans-serif;">
+                Want To Learn More About Me? Checkout my Chatbot!
+              </span>
+            </div>
 
-      <div class="card-body" style="padding: 1.5rem;">
-
-        <!-- Chatbot title -->
-        <div class="d-flex align-items-center mb-3">
-          
-          <!-- Red status dot -->
-          <div style="
-            width: 10px;
-            height: 10px;
-            background: #00ff0d;
-            border-radius: 50%;
-            margin-right: 8px;
-            box-shadow: 0 0 6px #00ff0d;
-          "></div>
-
-          <span style="
-            color: #000000;
-            font-weight: 600;
-            font-size: 1.5rem;
-            font-family: 'Poppins', sans-serif;
-          ">
-            Want to Learn more? Ask My AI
-          </span>
-
-        </div>
-
-
-        <!-- Chat window -->
-        <div id="chat-window" style="
-          background: rgba(193, 222, 250, 0.918);
-          border-radius: 8px;
-          height: 140px;
-          overflow-y: auto;
-          padding: 14px;
-          margin-bottom: 12px;
-          text-align: left;
-          font-family: 'Poppins', sans-serif;
-          font-size: 1.5rem;
-          color: #000;
-        ">
-
-          <div style="
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 8px;
-          ">
-            <strong style="color: #00aeff";">
-              Tyler's AI:
-            </strong>
-
-            <span style="color:#000">
-              <strong>
-                Hi There! Ask me anything about Tyler
-              </strong>
-            </span>
-          </div>
-
-
-        </div>
-
-
-        <!-- Suggested questions + input on same row -->
-        <div class="d-flex flex-wrap align-items-center" style="gap: 8px;">
-
-          <!-- Suggested Questions -->
-          <button
-            class="suggested-q"
-            style="
-              background: rgb(0,0,0);
-              border: 1px solid rgba(255,255,255,0.25);
-              color: #fff;
-              border-radius: 20px;
-              padding: 4px 12px;
-              font-size: 0.9rem;
+            <!-- Chat window -->
+            <div id="chat-window" style="
+              background: rgba(193, 222, 250, 0.918);
+              border-radius: 8px;
+              height: 140px;
+              overflow-y: auto;
+              padding: 14px;
+              margin-bottom: 12px;
+              text-align: left;
               font-family: 'Poppins', sans-serif;
-              cursor: pointer;
-            "
-          >
-            Top skills?
-          </button>
+              color: #000;
+            ">
 
-          <button
-            class="suggested-q"
-            style="
-              background: rgb(0,0,0);
-              border: 1px solid rgba(255,255,255,0.25);
-              color: #fff;
-              border-radius: 20px;
-              padding: 4px 12px;
-              font-size: 0.9rem;
-              font-family: 'Poppins', sans-serif;
-              cursor: pointer;
-            "
-          >
-            Projects?
-          </button>
-
-          <button
-            class="suggested-q"
-            style="
-              background: rgb(0,0,0);
-              border: 1px solid rgba(255,255,255,0.25);
-              color: #fff;
-              border-radius: 20px;
-              padding: 4px 12px;
-              font-size: 0.9rem;
-              font-family: 'Poppins', sans-serif;
-              cursor: pointer;
-            "
-          >
-            Certifications?
-          </button>
-
-
-          <!-- Input -->
-          <div class="input-group flex-grow-1" style="min-width: 250px;">
-
-            <input
-              type="text"
-              id="chat-input"
-              class="form-control"
-              placeholder="Type your question..."
-              style="
-                background: #fff;
-                border: 2px solid #00aeff;
-                color: #030303;
-                border-radius: 8px 0 0 8px;
-                outline: none;
-                box-shadow: none;
-                font-family: 'Poppins', sans-serif;
+              <div style="
                 font-size: 1rem;
-              "
-            >
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 8px;
+              ">
+                <strong style="color: #00aeff;">
+                  Tyler's AI:
+                </strong>
 
-            <div class="input-group-append">
-
-              <button
-                class="btn"
-                id="chat-send"
-                style="
-                  background: #00aeff;
-                  color: #fff;
-                  border-radius: 0 8px 8px 0;
-                  font-weight: 600;
-                  font-family: 'Poppins', sans-serif;
-                  font-size: 1rem;
-                "
-              >
-                Send
-              </button>
+                <span style="color:#000">
+                  <strong>
+                    Hi There! Ask me anything about Tyler
+                  </strong>
+                </span>
+              </div>
 
             </div>
+
+            <!-- Suggested questions + input -->
+            <div class="d-flex flex-wrap align-items-center" style="gap: 8px;">
+
+              <button
+                class="suggested-q"
+                style="
+                  background: rgb(0,0,0);
+                  border: 1px solid rgba(255,255,255,0.25);
+                  color: #fff;
+                  border-radius: 20px;
+                  padding: 4px 12px;
+                  font-size: 0.9rem;
+                  font-family: 'Poppins', sans-serif;
+                  cursor: pointer;
+                "
+              >
+                Top skills?
+              </button>
+
+              <button
+                class="suggested-q"
+                style="
+                  background: rgb(0,0,0);
+                  border: 1px solid rgba(255,255,255,0.25);
+                  color: #fff;
+                  border-radius: 20px;
+                  padding: 4px 12px;
+                  font-size: 0.9rem;
+                  font-family: 'Poppins', sans-serif;
+                  cursor: pointer;
+                "
+              >
+                Projects?
+              </button>
+
+              <button
+                class="suggested-q"
+                style="
+                  background: rgb(0,0,0);
+                  border: 1px solid rgba(255,255,255,0.25);
+                  color: #fff;
+                  border-radius: 20px;
+                  padding: 4px 12px;
+                  font-size: 0.9rem;
+                  font-family: 'Poppins', sans-serif;
+                  cursor: pointer;
+                "
+              >
+                Certifications?
+              </button>
+
+              <div class="input-group flex-grow-1" style="min-width: 250px;">
+
+                <input
+                  type="text"
+                  id="chat-input"
+                  class="form-control"
+                  placeholder="Type your question..."
+                  style="
+                    background: #fff;
+                    border: 2px solid #00aeff;
+                    color: #030303;
+                    border-radius: 8px 0 0 8px;
+                    outline: none;
+                    box-shadow: none;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 1rem;
+                  "
+                >
+
+                <div class="input-group-append">
+
+                  <button
+                    class="btn"
+                    id="chat-send"
+                    style="
+                      background: #00aeff;
+                      color: #fff;
+                      border-radius: 0 8px 8px 0;
+                      font-weight: 600;
+                      font-family: 'Poppins', sans-serif;
+                      font-size: 1rem;
+                    "
+                  >
+                    Send
+                  </button>
+
+                </div>
+              </div>
+
+            </div>
+
           </div>
-
         </div>
-
       </div>
     </div>
+
   </div>
-</div>
-```
-
-
-
+</section>
 
 
 <div class="section-separator"></div>
@@ -297,93 +260,62 @@
 
 
   <section id="timeline" class="timeline-section">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="text-white text-center">Experience Timeline</h2>
-        <br><br>
+        <h2 class="text-white text-center">Experience</h2>
+        <br>
         <div class="main-timeline">
 
-
-
           <div class="timeline">
-            <div class="timeline-content">
-              <div class="timeline-year">2017 <br> <h5>Jan - Dec</h5></div>
+            <div class="timeline-body">
+              <div class="timeline-date">Jan – Dec 2017</div>
               <h3 class="title">Custom PC Builder</h3>
-              <p class="description">
-                <strong>Independent Contractor</strong>
-                <br>
-                • Built 10+ custom gaming PCs tailored to client specifications.<br>
-                • Troubleshot hardware and software issues regarding PCs, Monitors, and Networking.<br>
-                • Provided consultation on hardware upgrades and system optimization.
-              </p>
+              <p class="org">Independent Contractor</p>
+              <p class="description">Built 10+ custom gaming PCs to client specs, resolved hardware/network issues, and advised on upgrades and system optimization.</p>
             </div>
+            <img src="images/timeline/custom-pc.jpg" alt="Custom-built PC" class="timeline-logo">
           </div>
 
-
-
           <div class="timeline">
-            <div class="timeline-content">
-              <div class="timeline-year">2022 <br> <h5>Aug - Sept</h5></div>
+            <div class="timeline-body">
+              <div class="timeline-date">Aug – Sept 2022</div>
               <h3 class="title">IT Coordinator</h3>
-              <p class="description">
-                <strong>Reconciliation In Business</strong>
-                <br>
-                • Led IT team in executing pre-event IT preparations.<br>
-                • Operated audiovisual hardware and software, ensuring seamless execution.<br>
-                • Utilized IT expertise to create an engaging list of questions, exploring the impact of technology in Indigenous communities.
-              </p>
+              <p class="org">Reconciliation in Business</p>
+              <p class="description">Led IT prep for a major event, ran AV systems on-site, and helped shape sessions on technology's impact in Indigenous communities.</p>
             </div>
+            <img src="images/timeline/tmu.jpg" alt="TMU logo" class="timeline-logo">
           </div>
 
-
-
           <div class="timeline">
-            <div class="timeline-content">
-              <div class="timeline-year">2023 <br> <h5>May - Dec</h5></div>
+            <div class="timeline-body">
+              <div class="timeline-date">May – Dec 2023</div>
               <h3 class="title">IT Experience Consultant</h3>
-              <p class="description">
-                <strong>Tridel</strong>
-                <br>
-                • Collaborated with external departments and 3rd party vendors to complete 10+ projects aimed at
-                improving the IT experience for internal employees.<br>
-                • Provided helpdesk support to 500+ employees both on-premises and on-site, efficiently resolving 275+
-                user tickets.<br>
-              </p>
+              <p class="org">Tridel</p>
+              <p class="description">Delivered 10+ cross-team IT projects and helpdesk support for 500+ employees, resolving 275+ tickets on-site and remote.</p>
             </div>
+            <img src="images/timeline/tridel.png" alt="Tridel logo" class="timeline-logo">
           </div>
 
-
-
           <div class="timeline">
-            <div class="timeline-content">
-              <div class="timeline-year">2024 <br> <h5>May - Aug</h5></div>
+            <div class="timeline-body">
+              <div class="timeline-date">May – Aug 2024</div>
               <h3 class="title">System Engineer</h3>
-              <p class="description">
-                <strong>FSRA</strong>
-                <br>
-                • Played a key role in the organization-wide Windows 11 migration and the transition from SCCM to Intune, assisting with device enrollment, Wi-Fi certificates, and application packaging.<br>
-                • Troubleshot and resolved tier 2 escalated issues, addressing challenges related to FortiClient VPN, Intune endpoint compliance, audio-visual, and cybersecurity threats.<br>
-              </p>
+              <p class="org">FSRA</p>
+              <p class="description">Drove the org-wide Windows 11 and SCCM-to-Intune migration, and resolved tier-2 issues across VPN, endpoint compliance, and AV systems.</p>
             </div>
+            <img src="images/timeline/fsra.png" alt="FSRA logo" class="timeline-logo">
           </div>
-
-
 
           <div class="timeline">
-            <div class="timeline-content">
-              <div class="timeline-year">2025 <br> <h5>Jan - Aug</h5></div>
+            <div class="timeline-body">
+              <div class="timeline-date">Jan – Aug 2025</div>
               <h3 class="title">Systems Administrator</h3>
-              <p class="description">
-                <strong>PointClickCare</strong>
-                <br>
-                • Built Power BI dashboards and Power Automate flows integrating multiple APIs to improve offboarding compliance and ticket response, reducing costs.<br>
-                • Audited cloud apps with Microsoft Defender for Cloud Apps, removing high-risk apps and lowering security exposure.
-              </p>
+              <p class="org">PointClickCare</p>
+              <p class="description">Built Power BI dashboards and Power Automate flows across multiple APIs to cut offboarding costs, and audited cloud apps to reduce security exposure.</p>
             </div>
+            <img src="images/timeline/pointclickcare.png" alt="PointClickCare logo" class="timeline-logo">
           </div>
-
-
 
         </div>
       </div>
@@ -486,6 +418,32 @@
             </h5>
             <div class="service-border"></div>
             <p class="card-text">Explored vulnerabilities on Metasploitable, including FTP anonymous access, weak SSH credentials, misconfigured Samba shares, and unpatched web apps. Used exploits to gain unauthorized access and demonstrate security impact, enhancing my skills in identifying security weaknesses.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Azure Cloud Resume Challenge</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Built and deployed a cloud-hosted resume on Azure, covering static web hosting, a serverless API, Cosmos DB, CI/CD via GitHub Actions, and infrastructure as code — hands-on practice across the full Azure stack.</p>
+            <a class="project-link" href="https://github.com/TylerHarn/CloudResumeAzure" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card project-card">
+          <div class="card-header">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Local AI Calorie Tracker</h5>
+            <div class="service-border"></div>
+            <p class="card-text">Built a free, self-hosted calorie tracker using a Cohere model with computer vision to identify meals from photos, replacing a paid MyFitnessPal subscription with a locally-run alternative.</p>
+            <a class="project-link" href="https://github.com/TylerHarn/Free-AI-Calorie-Tracker-for-Local-Hosting" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
           </div>
         </div>
       </div>
@@ -656,7 +614,7 @@
 
 
 
-<section class="contact r-p bg-sec2" id="contact" style="background-image: url('images/Gradient 2.webp'); background-size: cover; background-position: center;">
+<section class="contact r-p bg-sec2" id="contact">
   <div class="container text-center">
     <div class="row">
       <div class="col way-fade-left">
@@ -722,19 +680,6 @@
 
   <!-- footer -->
   <footer>
-    <div class="container h-100 d-flex align-items-center justify-content-center">
-      <div class="row">
-        <div class="col">
-          <div class="r-icon text-center mt-3">
-            <ul>
-              <li class="list-inline-item animated slideInUp"><a href="https://www.linkedin.com/in/tylerharnaraine"><i class="fab fa-linkedin"></i></a></li>
-              <li class="list-inline-item animated slideInUp"><a href="tel:4168252948"><i class="fas fa-mobile-alt"></i></a></li>
-              <li class="list-inline-item animated slideInUp"><a href="mailto:tyler.harnaraine@torontomu.ca"><i class="far fa-envelope"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
   </footer>
   <script src="lib/jquery-3.3.1.min.js"></script>
   <script src="lib/popper.min.js"></script>
@@ -745,6 +690,80 @@
   <script src="lib/typed.js"></script>
   <script src="lib/jquery.waypoints.min.js"></script>
   <script src="lib/jquery.filterizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.halo.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.dots.min.js"></script>
+  <script>
+    if (window.VANTA) {
+      VANTA.NET({
+        el: "#home",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x00aeff,
+        backgroundColor: 0x0a0c0f,
+        points: 9.00,
+        maxDistance: 22.00,
+        spacing: 17.00,
+        showDots: true
+      });
+    }
+
+    // Ambient (non-interactive) backgrounds for the remaining sections —
+    // lazy-initialized on scroll-into-view so we're not running 4 extra
+    // WebGL contexts on page load.
+    if (window.VANTA && 'IntersectionObserver' in window) {
+      var ambientTargets = [
+        { el: '#about', effect: 'DOTS', options: {
+            color: 0x2a4258, color2: 0x2a4258, backgroundColor: 0x0a0c0f,
+            size: 3.0, spacing: 38.0, showLines: false
+          } },
+        { el: '#timeline', effect: 'DOTS', options: {
+            color: 0x2a4258, color2: 0x2a4258, backgroundColor: 0x0d1013,
+            size: 3.0, spacing: 38.0, showLines: false
+          } },
+        { el: '#services', effect: 'HALO', options: {
+            baseColor: 0x00aeff, backgroundColor: 0x0d1013, amplitudeFactor: 0.7, size: 0.7
+          } },
+        { el: '#contact', effect: 'HALO', options: {
+            baseColor: 0x00aeff, backgroundColor: 0x0a0c0f, amplitudeFactor: 0.7, size: 0.7
+          } },
+        { el: '#work', effect: 'DOTS', options: {
+            color: 0x2a4258, color2: 0x2a4258, backgroundColor: 0x0d1013,
+            size: 3.0, spacing: 38.0, showLines: false
+          } }
+      ];
+
+      var ambientObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          ambientObserver.unobserve(entry.target);
+          var config = ambientTargets.filter(function (t) {
+            return document.querySelector(t.el) === entry.target;
+          })[0];
+          if (!config || !VANTA[config.effect]) return;
+          VANTA[config.effect](Object.assign({
+            el: config.el,
+            mouseControls: false,
+            touchControls: false,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00
+          }, config.options));
+        });
+      }, { rootMargin: '200px' });
+
+      ambientTargets.forEach(function (t) {
+        var node = document.querySelector(t.el);
+        if (node) ambientObserver.observe(node);
+      });
+    }
+  </script>
   <script src="js/app.js"></script>
 </body>
 </html>
