@@ -130,7 +130,7 @@ p {
 nav .navbar-brand {
   font-size: 30px;
   color: var(--text-primary);
-  transition: 0.2s all;
+  transition: 0.12s all;
 }
 nav .navbar-nav li {
   margin-left: 20px;
@@ -159,7 +159,7 @@ nav.r-nav {
   padding: 20px 0px;
   border-bottom: 1px solid var(--hairline);
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
-  transition: 0.2s all;
+  transition: 0.12s all;
 }
 
 
@@ -167,11 +167,11 @@ nav.r-nav.stickyadd {
   background: var(--bg-deep);
   padding: 15px 0;
   box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.35);
-  transition: 0.2s all ease-in-out;
+  transition: 0.12s all ease-in-out;
 }
 nav.stickyadd .navbar-brand {
   font-size: 40px;
-  transition: 0.2s all;
+  transition: 0.12s all;
 }
 .navbar .hamburger {
   color: var(--text-primary);
@@ -182,8 +182,8 @@ header * {
   animation-delay: 0.5s;
 }
 nav * {
-  animation-delay: 0.05s;
-  animation-duration: 0.35s;
+  animation-delay: 0.02s;
+  animation-duration: 0.18s;
 }
 
 
