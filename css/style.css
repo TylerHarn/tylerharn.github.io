@@ -413,7 +413,22 @@ Cards flipping boxes and animation */
 
 
   .project-card {
+    height: 100%;
     transition: transform 1s ease-in-out, box-shadow 0.5s ease-in-out;
+  }
+
+  .project-card .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card .card-title {
+    min-height: 3.2rem;
+  }
+
+  .project-card .project-link {
+    margin-top: auto;
+    padding-top: 0.75rem;
   }
   
   .project-card:hover {
