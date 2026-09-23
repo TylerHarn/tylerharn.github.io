@@ -12,7 +12,7 @@ This portfolio covers my background in IT, from building custom PCs to working a
 - **TylerAI Chatbot**: an AI assistant powered by Cohere that answers questions about my background in real time. Runs through a Cloudflare Worker since GitHub Pages is a static site with no backend.
 - **Experience Timeline**: roles from 2017 to present across IT support, system engineering, and sysadmin
 - **Projects Section**: hands-on lab work including VMware ESXi, Linux home server, Snort IDS, vulnerability exploitation, the Azure Cloud Resume Challenge, and a local AI calorie tracker
-- **Certifications**: filterable gallery of earned badges (ISC2 CC, Cisco Networking, Python, SQL, Linux, and more)
+- **Certifications**: filterable gallery of earned badges (ISC2 CC, Cisco Networking, Python, AZ-900, AZ-901, and more)
 - **Contact Form**: functional form via Formspree
 - **Text-to-Speech**: accessibility toggle for reading page content aloud
 
