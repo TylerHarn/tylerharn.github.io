@@ -62,11 +62,6 @@ $(document).ready(function(){
   });
 
 
-  var filterizd = $('.filter-container').filterizr({
-    animationDuration: .5,
-  });
-
-
   var typed = new Typed(".element", {
     strings: ["Tyler Harnaraine"],
     smartBackspace: true,
@@ -86,21 +81,6 @@ $(document).ready(function(){
 
   $('.navbar-nav .nav-link').click(function(){
     $('.navbar-collapse').collapse('hide');
-  });
-
-
-  // CHANGED: Certification cards — click (and Enter/Space keyboard) to toggle flip
-  // Removed hover-based flip; .flipped class is toggled on click instead
-  $('.card-flip').on('click', function () {
-    $(this).toggleClass('flipped');
-  });
-
-  // ADDED: keyboard support — pressing Enter or Space also flips the card
-  $('.card-flip').on('keydown', function (e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      $(this).toggleClass('flipped');
-    }
   });
 
 });
